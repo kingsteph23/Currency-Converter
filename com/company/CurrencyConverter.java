@@ -42,6 +42,10 @@ emojis(countries/territories)*/
 
 		DecimalFormat conversion = new DecimalFormat("##.###");
 // allows users to input and write statements
+		/*title which is ab;e to display time(based on date time formatter)
+		Displays current time/date based on user preferences
+		Also title displays currencies such as dollars,euros,pounds,yen,won,lira's, and rupees
+		 */
 		Scanner scan = new Scanner(System.in);
 		System.out.println("---------------------");
 		System.out.println("Currency Converter");
@@ -75,41 +79,52 @@ emojis(countries/territories)*/
 
 		String currencyconvert1 = scan.nextLine();
 
-		switch (currencyconvert1) {
-			case "US dollar", "USD" -> System.out.println("How much, " + currencyconvert1 + ", do you wish to convert:$");
+		if ("US dollar".equals(currencyconvert1) || "USD".equals(currencyconvert1)) {
+			System.out.println("How much, " + currencyconvert1 + ", do you wish to convert:$");
 
 // Asking to know how much euros you wish to convert
-			case "Euros", "EUR" -> System.out.println("How much, " + currencyconvert1 + ", do you wish to convert: €");
+		} else if ("Euros".equals(currencyconvert1) || "EUR".equals(currencyconvert1)) {
+			System.out.println("How much, " + currencyconvert1 + ", do you wish to convert: €");
 
 // Asking to know how much pounds you wish to convert
-			case "Pounds", "GBP" -> System.out.println("How much, " + currencyconvert1 + ",do you wish to convert: £");
+		} else if ("Pounds".equals(currencyconvert1) || "GBP".equals(currencyconvert1)) {
+			System.out.println("How much, " + currencyconvert1 + ",do you wish to convert: £");
 
 // Asking to know how much canadian dollar you wish to convert
-			case "Canadian Dollar", "CAD" -> System.out.println("How much, " + currencyconvert1 + ", do you wish to convert:$");
+		} else if ("Canadian Dollar".equals(currencyconvert1) || "CAD".equals(currencyconvert1)) {
+			System.out.println("How much, " + currencyconvert1 + ", do you wish to convert:$");
 
 // Asking to know how much swiss franc's you wish to convert
-			case "Swiss franc", "CHF" -> System.out.println("How much, " + currencyconvert1 + ",Do you wish to convert?:CHF");
+		} else if ("Swiss franc".equals(currencyconvert1) || "CHF".equals(currencyconvert1)) {
+			System.out.println("How much, " + currencyconvert1 + ",Do you wish to convert?:CHF");
 
 // Asking to know how much Japanese Yen you wish to convert
-			case "Japanese Yen", "JPY" -> System.out.println("How much ," + currencyconvert1 + ",do you wish to convert?:¥");
+		} else if ("Japanese Yen".equals(currencyconvert1) || "JPY".equals(currencyconvert1)) {
+			System.out.println("How much ," + currencyconvert1 + ",do you wish to convert?:¥");
 
 // Asking to know how much Chinese Yuan you wish to convert
-			case "Chinese Yuan", "CNY" -> System.out.println("How much, " + currencyconvert1 + " do you wish to convert?:¥");
+		} else if ("Chinese Yuan".equals(currencyconvert1) || "CNY".equals(currencyconvert1)) {
+			System.out.println("How much, " + currencyconvert1 + " do you wish to convert?:¥");
 
 // Asking to know how much Hong Kong Dollar's you wish to convert
-			case "Hong Kong Dollar", "HKD" -> System.out.println("How much " + currencyconvert1 + " do you wish to convert?:$");
+		} else if ("Hong Kong Dollar".equals(currencyconvert1) || "HKD".equals(currencyconvert1)) {
+			System.out.println("How much " + currencyconvert1 + " do you wish to convert?:$");
 
 // Asking to know how much South Korean Won you wish to convert
-			case "South Korean won", "KRW" -> System.out.println("How much ," + currencyconvert1 + "do you wish to convert?:₩");
+		} else if ("South Korean won".equals(currencyconvert1) || "KRW".equals(currencyconvert1)) {
+			System.out.println("How much ," + currencyconvert1 + "do you wish to convert?:₩");
 
 // Asking to know how much Indian rupee's you wish to convert
-			case "Indian rupee", "INR" -> System.out.println("How much, " + currencyconvert1 + "do you wish to convert?:₹");
+		} else if ("Indian rupee".equals(currencyconvert1) || "INR".equals(currencyconvert1)) {
+			System.out.println("How much, " + currencyconvert1 + "do you wish to convert?:₹");
 
 // Asking to know how much Australian dollars you wish to convert
-			case "Australian Dollar", "AUD" -> System.out.println("How much, " + currencyconvert1 + ", do you wish to convert?:$");
+		} else if ("Australian Dollar".equals(currencyconvert1) || "AUD".equals(currencyconvert1)) {
+			System.out.println("How much, " + currencyconvert1 + ", do you wish to convert?:$");
 
 // New zealand dollars
-			case "New Zealand Dollar", "NZD" -> System.out.println("How much, " + currencyconvert1 + ", do wish to convert?:$");
+		} else if ("New Zealand Dollar".equals(currencyconvert1) || "NZD".equals(currencyconvert1)) {
+			System.out.println("How much, " + currencyconvert1 + ", do wish to convert?:$");
 		}
 
 //
@@ -285,11 +300,13 @@ System.out.println("Select a currency you wish to convert to?:"+
 
 		// Euro conversions
 		if (currencyconvert1.equals("EUR") || currencyconvert1.equals("Euros")) {
-			String[] euroconversionoptions = {"USD", "GBP", "CAD", "CHF", "JPY", "CNY", "HKD", "KRW", "INR", "AUD", "NZD"};
+			String[] euroconversionoptions = {"\n", "AUD", "CAD", "CHF", "CNY",
+					"\n"+"GBP", "HKD", "INR", "JPY", "KRW", "NZD", "USD"};
 			System.out.println("Please select a currency of your choice" +
 					"\n" + Arrays.toString(euroconversionoptions));
 			scan.nextLine();
 			String euroselector = scan.nextLine();
+
 // EUR -> USD
 			if (euroselector.equals("USD")) {
 				double usd = amount * 1.2;
@@ -334,6 +351,8 @@ System.out.println("Select a currency you wish to convert to?:"+
 			}else if(euroselector.equals("NZD")) {
 				double NZD = amount * 1.69;
 				System.out.println("" + amount + " EUR=" + conversion.format(NZD) + " NZD");
+
+
 			}
 // Conversions for  Swiss francs
 		}
@@ -397,13 +416,13 @@ System.out.println("Select a currency you wish to convert to?:"+
 			/* japanese yen potential conversions(in a array to store them rather
 			how i did it prior(The whole double system.Prints out all currencies rather than specific one)
 			 */
-			String[] jpycurrencies = {"USD", "EUR", "GBP", "HKD", "CNY", "KRW", "INR", "AUD", "NZD"};
+			String[] jpycurrencies = {"USD", "EUR","CAD","GBP", "HKD", "CNY", "KRW", "INR", "AUD", "NZD"};
 			System.out.println("Please select a currency of your choice:" + Arrays.toString(jpycurrencies));
 			scan.nextLine();
 			String jpyselector = scan.nextLine();
 // jpy -> usd
 			if (jpyselector.equals("USD")) {
-				double murica = amount * 0.009;
+				double murica = amount * 0.009077;
 				System.out.println("" + amount + " JPY=" + conversion.format(murica) + " usd");
 // jpy-> euro
 			} else if (jpyselector.equals("EUR")) {
@@ -439,13 +458,178 @@ System.out.println("Select a currency you wish to convert to?:"+
 				System.out.println(""+amount+" JPY="+conversion.format(nzdollar)+" NZD");
 
 
+			}else if(jpyselector.equals("CAD")){
+				double canadadollar = amount * 0.0112;
+				System.out.println(""+amount+" JPY="+conversion.format(canadadollar)+" CAD");
 			}
+
+
+
+
+
 			// chinese yuan conversions
-			}if(currencyconvert1.equals("Chinese Yuan")||currencyconvert1.equals("CNY")){
-			String[] chinayuancovert = {"USD", "GBP", "CAD", "CHF", "JPY", "HKD", "KRW", "INR", "AUD", "NZD"};
-			System.out.println("Please select a currency of your choice"+
-					"\n"+Arrays.toString(chinayuancovert));
+			}if(currencyconvert1.equals("Chinese Yuan")||currencyconvert1.equals("CNY")) {
+			String[] chinayuancovert = {"USD", "GBP", "CAD","EUR", "CHF", "JPY", "HKD", "KRW", "INR", "AUD", "NZD"};
+			System.out.println("Please select a currency of your choice" +
+					"\n" + Arrays.toString(chinayuancovert));
 			scan.nextLine();
 			String chinayuanselector = scan.nextLine();
+// CNY -> USD
+			if(chinayuanselector.equals("USD")) {
+				double usdresult = amount * 0.155;
+				System.out.println(""+amount+" CNY = "+conversion.format(usdresult)+" USD");
+				// CNY -> GBP
+			}else if(chinayuanselector.equals("GBP")){
+				double britishpoundresults = amount * 0.1113;
+				System.out.println(""+amount+" CNY = "+conversion.format(britishpoundresults)+" GBP");
+				// CNY ->cad
+			}else if(chinayuanselector.equals("CAD")){
+				double cadresults = amount * 0.19;
+				System.out.println(""+amount+" CNY = "+conversion.format(cadresults)+" CAD");
+				// CNY -> EUR
+			}else if(chinayuanselector.equals("EUR")){
+				double euroresults = amount *  0.13;
+				System.out.println(""+amount+" CNY = "+conversion.format(euroresults)+" EUR");
+				// CNY-> CHF
+			}else if(chinayuanselector.equals("CHF")){
+				double swissyfrancs = amount * 0.14;
+				System.out.println(""+amount+" CNY ="+conversion.format(swissyfrancs)+" CHF");
+				// CNY-> JPY
+			}else if(chinayuanselector.equals("JPY")){
+				double japanyenresults = amount * 17.09;
+				System.out.println(""+amount+" CNY ="+conversion.format(japanyenresults)+" JPY");
+				// CNY -> HKD
+			}else if(chinayuanselector.equals("HKD")){
+				double hongkongmoney = amount * 1.204;
+				System.out.println(""+amount+" CNY ="+conversion.format(hongkongmoney)+" HKD");
+				// CNY -> KRW
+			}else if(chinayuanselector.equals("KRW")){
+				double southkoreawon = amount * 175.93;
+				System.out.println(""+amount+" CNY = "+conversion.format(southkoreawon)+" KRW");
+				//CNY -> INR
+			}else if(chinayuanselector.equals("INR")){
+				double indiarupeeresults = amount * 11.52;
+				System.out.println(""+amount+" CNY = "+conversion.format(indiarupeeresults)+" INR");
+			// CNY -> AUD
+			}else if(chinayuanselector.equals("AUD")){
+				double aussiedollaresults = amount * 0.205;
+				System.out.println(""+amount+" CNY = "+conversion.format(aussiedollaresults)+" AUD");
+				// CNY -> NZD
+			}else if(chinayuanselector.equals("NZD")){
+				double nzdresults = amount * 0.221;
+				System.out.println(""+amount+" CNY ="+conversion.format(nzdresults)+" NZD");
+
+
+// if player wishes to convert hong kong dollars
+			}
+
+			}if(currencyconvert1.equals("Hong Kong Dollar")||currencyconvert1.equals("HKD")) {
+			String[] HKDconversions = {"USD", "CAD", "EUR", "GBP", "CHF",
+					"\n" + "JPY", "CNY", "KRW", "INR", "AUD", "NZD"};
+			System.out.println("Select a currency to convert to" +
+					"\n" + Arrays.toString(HKDconversions));
+			scan.nextLine();
+			String hkconverter = scan.nextLine();
+			// HKD -> US
+			if (hkconverter.equals("USD")) {
+				double usdresult = amount * 0.13;
+				System.out.println("" + amount + " HKD =" + conversion.format(usdresult) + " USD  ");
+				// HKD -> CAD
+			} else if (hkconverter.equals("CAD")) {
+				double cadresult = amount * 0.16;
+				System.out.println("" + amount + " HKD = " + conversion.format(cadresult) + " CAD");
+				// HKD -> EUR
+			} else if (hkconverter.equals("EUR")) {
+				double euroconvert = amount * 0.11;
+				System.out.println("" + amount + " HKD =" + conversion.format(euroconvert) + " EUR");
+				// HKD -> GPD
+			} else if (hkconverter.equals("GBP")) {
+				double britishresult = amount * 0.092;
+				System.out.println("" + amount + " HKD = " + conversion.format(britishresult) + " GBP");
+				// HKD -> CHF
+			} else if (hkconverter.equals("CHF")) {
+				double swissfranc = amount * 0.118;
+				System.out.println("" + amount + " HKD = " + conversion.format(swissfranc) + " CHF");
+				// HKD -> JPY
+			} else if (hkconverter.equals("JPY")) {
+				double jpyresult = amount * 14.2;
+				System.out.println("" + amount + " HKD =" + conversion.format(jpyresult) + " JPY");
+				// HKD -> CNY
+			} else if (hkconverter.equals("CNY")) {
+				double chinaconvert = amount * 0.83;
+				System.out.println(""+amount+" HKD ="+conversion.format(chinaconvert)+" CNY");
+				// HKD -> KRW
+			}else if (hkconverter.equals("KRW")){
+				double koreanwon = amount * 146.1;
+				System.out.println(""+amount+" HKD = "+conversion.format(koreanwon)+" KRW");
+				// HKD -> INR
+			}else if(hkconverter.equals("INR")){
+				double rupees = amount * 9.55;
+				System.out.println(""+amount+" HKD = "+conversion.format(rupees)+" INR");
+
+				// HKD -> AUD
+			}else if(hkconverter.equals("AUD")){
+				double aussiebucks = amount * 0.17;
+				System.out.println(""+amount+" HKD ="+conversion.format(aussiebucks)+" AUD");
+				// HKD -> NZD
+			}else if(hkconverter.equals("NZD")){
+					double nzdollas = amount * 0.18;
+				System.out.println(""+amount+" HKD ="+conversion.format(nzdollas)+" NZD");
+			}
+			// if player wishes to use south korean won
+		}if(currencyconvert1.equals("KRW")||currencyconvert1.equals("South Korean won")){
+				String[] potientalwonconversions = {"USD","CAD","GBP","EUR","CHF"
+													+"\n"+"JPY","HKD","INR","AUD","NZD"};
+				/*Based on potientalwonconversions array. Currency exchange rates of that array
+				Order based on the order of currencies. So first is the USD, and goes all the way to NZD
+				 */
+				double[] currencyresults = {0.000888,0.00109,0.000633,0.00074,0.000809,
+											0.0973,0.00685,0.0654,0.00117,0.00126};
+
+				System.out.println("Please select a currency you wish to convert to:"+
+						"\n"+Arrays.toString(potientalwonconversions));
+				scan.nextLine();
+				String woncurrencyresults = scan.nextLine();
+// KRW -> USD
+				if(woncurrencyresults.equals("USD")){
+					double usdresult = amount * currencyresults[0];
+					System.out.println(""+amount+" KRW = "+conversion.format(usdresult)+" USD");
+					// KRW -> CAD
+				}else if(woncurrencyresults.equals("CAD")){
+					double cadresult = amount * currencyresults[1];
+					System.out.println(""+amount+" KRW ="+conversion.format(cadresult)+" CAD");
+					// KRW -> GBP
+				}else if(woncurrencyresults.equals("GBP")){
+					double poundoutcomes = amount * currencyresults[2];
+					System.out.println(""+amount+" KRW ="+conversion.format(poundoutcomes)+" GBP");
+					// KRW -> EUR
+				}else if(woncurrencyresults.equals("EUR")) {
+					double euroresult = amount * currencyresults[3];
+					System.out.println("" + amount + " KRW =" + conversion.format(euroresult) + " EUR");
+				// KRW -> CHF
+				}else if(woncurrencyresults.equals("CHF")){
+					double swissyfrancresult = amount * currencyresults[4];
+					System.out.println(""+amount+" KRW = "+conversion.format(swissyfrancresult)+" CHF");
+					// KRW -> JPY
+				}else if(woncurrencyresults.equals("JPY")){
+						double jpyoutcome = amount * currencyresults[5];
+					System.out.println(""+amount+" KRW ="+conversion.format(jpyoutcome)+" JPY");
+						// KRW -> HKD
+				}else if(woncurrencyresults.equals("HKD")){
+					double hkresult = amount * currencyresults[6];
+					System.out.println(""+amount+" KRW ="+conversion.format(hkresult)+" HKD");
+					// KRW -> INR
+				}else if(woncurrencyresults.equals("INR")){
+					double indiamoneyresult = amount * currencyresults[7];
+					System.out.println(""+amount+" KRW ="+conversion.format(indiamoneyresult)+" INR");
+					// KRW -> AUD
+				}else if(woncurrencyresults.equals("AUD")){
+					double aussiebucksresults = amount * currencyresults[8];
+					System.out.println(""+amount+" KRW ="+conversion.format(aussiebucksresults)+" AUD");
+					// KRW -> NZD
+				}else if(woncurrencyresults.equals("NZD")){
+					double newzealandbucks = amount * currencyresults[9];
+					System.out.println(""+amount+" KRW ="+conversion.format(newzealandbucks)+" NZD");
+				}
 		}
 	}}
