@@ -131,7 +131,6 @@ emojis(countries/territories)*/
 			System.out.println("How much, " + currencyconvert1 + "(\uD83C\uDDF3\uD83C\uDDFF) do wish to convert?:$");
 		}
 
-//
 		System.out.println();
 		int amount = scan.nextInt();
 
