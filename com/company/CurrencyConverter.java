@@ -163,18 +163,23 @@ emojis(countries/territories)*/
 // Conversions for US dollars
 		if (currencyconvert1.equals("US dollar") || (currencyconvert1.equals("USD"))) {
 			String[] muricanselectors = {"EUR", "CAD", "GBP", "CHF", "JPY",
-					"CNY", "HKD", "KRW", "INR", "AUD", "NZD"};
+					"CNY", "HKD", "KRW", "INR", "AUD", "NZD", "HTG", "HRK", "MXN"};
 
-			double[] usdexchanges = {0.84284859,
-					1.2470347,
-					0.72437585,
-					0.92275915,
-					110.24367,
-					6.4530238,
-					7.76255,
-					1134.9152,
-					74.131551,
-					1.3369583, 1.4421582};
+			double[] usdexchanges = {0.8378525,
+					1.22948,
+					0.72050246,
+					0.91770028,
+					110.80238,
+					6.4553835,
+					7.7619705,
+					1, 127.3826,
+					74.177887,
+					1.3181212,
+					1.413889,
+					94.500053,
+					6.2769846,
+					19.824989};
+
 			System.out.println("Please select a currency to convert to of your choice:" +
 					"\n" + Arrays.toString(muricanselectors));
 			scan.nextLine();
@@ -232,18 +237,25 @@ emojis(countries/territories)*/
 		if (currencyconvert1.equals("Canadian Dollar") || currencyconvert1.equals("CAD")) {
 // All canadian potential options
 			String[] candaianselector = {"USD", "EUR", "GBP", "CHF", "JPY",
-					"CNY", "HKD", "KRW", "INR", "AUD", "NZD"};
+					"CNY", "HKD", "KRW", "INR", "AUD", "NZD","HTG","HRK","MXN"};
 
-			double[] canadianexchanges = {0.80190232,
-					0.67588224,
-					0.58087867,
-					0.7399627,
-					88.4052,
-					5.1746879,
-					6.2248068,
-					910.09113,
-					59.446262,
-					1.07211, 1.15647};
+			double[] canadianexchanges = {0.81335202,
+					0.68146902,
+					0.58602213,
+					0.74641337,
+					90.121339,
+					5.2504992,
+					6.313236,
+					916.96701,
+					60.330584,
+					1.0720934,
+					1.1499995,
+					76.862481,
+					5.1054429,
+					16.124949};
+
+
+
 			System.out.println("Select a currency you wish to convert to?:" +
 					"\n" + Arrays.toString(candaianselector));
 			scan.nextLine();
@@ -298,18 +310,23 @@ emojis(countries/territories)*/
 		}
 		if (currencyconvert1.equals("Pounds") || currencyconvert1.equals("GBP")) {
 			String[] britishpounds = {"USD", "CAD", "EUR", "CHF", "JPY",
-					"CNY", "HKD", "KRW", "INR", "AUD", "NZD"};
+					"CNY", "HKD", "KRW", "INR", "AUD", "NZD", "HTG", "HRK", "MXN"};
 			// british exchanges rates based on british pounds array
-			double[] britishexchanges = {1.3804988,
-					1.7215299,
-					1.1635515,
-					1.2739899,
-					152.19385,
-					8.9086918,
-					10.716526,
-					1566.8004,
-					102.34187,
-					1.8456689, 1.9909629};
+			double[] britishexchanges = {1.3896621,
+					1.7086516,
+					1.1643368,
+					1.2755846,
+					153.93983,
+					8.972421,
+					10.786759,
+					1566.8003,
+					103.10119,
+					1.832998,
+					1.9652243,
+					129.00479,
+					8.7298127,
+					27.534986};
+
 			System.out.println("Select a currency you wish to convert to?: " +
 					"\n" + Arrays.toString(britishpounds));
 			scan.nextLine();
@@ -367,16 +384,21 @@ emojis(countries/territories)*/
 			String[] euroconversionoptions = {"USD", "CAD", "GBP", "CHF", "JPY",
 					"CNY", "HKD", "KRW", "INR", "AUD", "NZD"};
 // EURO currency exchange rates based on conversion options array
-			double[] euroexchanges = {1.1864322,
-					1.4794711,
-					0.85939466,
-					1.0948602,
-					130.79458,
-					7.6563218,
-					9.2097248,
-					1346.4999,
-					87.952057,
-					1.586158, 1.7110228};
+
+			double[] euroexchanges = {1.1935435,
+					1.4675166,
+					0.8590882,
+					1.095764,
+					132.20582,
+					7.7050111,
+					9.2633229,
+					1345.5942,
+					88.549648,
+					1.5742671,
+					1.6875039,
+					110.77819,
+					7.4973875,
+					23.654266};
 
 
 			System.out.println("Please select a currency of your choice" +
@@ -436,18 +458,22 @@ emojis(countries/territories)*/
 		if (currencyconvert1.equals("Swiss franc") || currencyconvert1.equals("CHF")) {
 
 			String[] swissconversion = {"USD", "CAD", "EUR", "GBP", "JPY",
-					"CNY", "HKD", "KRW", "INR", "AUD", "NZD"};
+					"CNY", "HKD", "KRW", "INR", "AUD", "NZD","HTG","HRK","MXN"};
 // swiss exchanges based on swissconversion array
-			double[] swissexchanges = {1.0836381,
-					1.3512878,
-					0.91335866,
-					0.78493555,
-					119.46236,
-					6.9927373,
-					8.4117819,
-					1229.8373,
-					80.331772,
-					1.4487311, 1.5627775};
+			double[] swissexchanges = {1.0891802,
+					1.339196,
+					0.91284747,
+					0.78455427,
+					120.70571,
+					7.0331472,
+					8.4558061,
+					1228.2725,
+					80.80371,
+					1.4368032,
+					1.5405808,
+					101.48465,
+					6.8405835,
+					21.586139};
 			System.out.println("Please select a currency of your choice:" +
 					"\n" + Arrays.toString(swissconversion));
 			scan.nextLine();
@@ -506,17 +532,22 @@ emojis(countries/territories)*/
 			how i did it prior(The whole double system.Prints out all currencies rather than specific one)
 			 */
 			String[] jpycurrencies = {"USD", "EUR", "CAD", "GBP", "HKD",
-					"CNY", "KRW", "INR", "AUD", "NZD"};
+					"CNY", "KRW", "INR", "AUD", "NZD", "HTG", "HRK", "MXN"};
 // jpy exchange rates based on jpycurrency array
-			double[] jpyexchangerates = {0.0090709582,
-					0.0076455768,
-					0.01131141,
-					0.0065705678,
-					0.070413658,
-					0.058535032,
-					10.294768,
-					0.6724442,
-					0.012127092, 0.013081757};
+			double[] jpyexchangerates = {0.0090252854,
+					0.0075621801,
+					0.011097333,
+					0.0064973919,
+					0.070051201,
+					0.05826855,
+					10.17488,
+					0.66966838,
+					0.011904896,
+					0.012763449,
+					0.83827471,
+					0.056694686,
+					0.17886937};
+
 			System.out.println("Please select a currency of your choice:" + Arrays.toString(jpycurrencies));
 			scan.nextLine();
 			String jpyselector = scan.nextLine();
@@ -576,20 +607,24 @@ emojis(countries/territories)*/
 					"HKD",
 					"KRW",
 					"INR",
-					"AUD", "NZD"};
+					"AUD", "NZD", "HTG", "HRK", "MXN"};
 
 
 			// chinese currency exchanges
-			double[] chinacurrencyexchanges = {0.15496632,
-					0.11225018,
-					0.19324172,
-					0.1306154,
-					0.1430056,
-					17.083787,
-					1.2029319,
-					175.87363,
-					11.487893,
-					0.20717666, 0.22348594};
+			double[] chinacurrencyexchanges = {0.15489162,
+					0.11150764,
+					0.19044185,
+					0.12978363,
+					0.1422277,
+					17.161782,
+					1.2021664,
+					174.62463,
+					11.492887,
+					0.20435696,
+					0.21923473,
+					14.3791,
+					0.97302982,
+					3.0698236};
 
 
 			System.out.println("Please select a currency of your choice" +
@@ -648,19 +683,22 @@ emojis(countries/territories)*/
 		}
 		if (currencyconvert1.equals("Hong Kong Dollar") || currencyconvert1.equals("HKD")) {
 			String[] HKDconversions = {"USD", "CAD", "EUR", "GBP", "CHF",
-					"\n" + "JPY", "CNY", "KRW", "INR", "AUD", "NZD"};
+					"\n" + "JPY", "CNY", "KRW", "INR", "AUD", "NZD", "HTG", "HRK", "MXN"};
 // currency exchange rates based on  hkd currencies array
-			double[] hkcurrencyexchange = {0.12882385,
-					0.16064227,
-					0.10858088,
-					0.093313826,
-					0.11888088,
-					14.20179,
-					0.83130225,
-					146.20414,
-					9.5499115,
-					0.17222642, 0.18578436};
-
+			double[] hkcurrencyexchange = {0.12884056,
+					0.15840684,
+					0.10795292,
+					0.092747291,
+					0.11830891,
+					14.27569,
+					0.83179533,
+					145.24931,
+					9.5597888,
+					0.16995157,
+					0.18240799,
+					11.959454,
+					0.80939376,
+					2.5537292};
 			//
 			System.out.println("Select a currency to convert to" +
 					"\n" + Arrays.toString(HKDconversions));
@@ -715,12 +753,25 @@ emojis(countries/territories)*/
 			// if player wishes to use south korean won
 		}
 		if (currencyconvert1.equals("KRW") || currencyconvert1.equals("South Korean won")) {
-			String[] potientalwonconversions = {"USD", "CAD", "GBP", "EUR", "CHF", "JPY", "CNY", "HKD", "INR", "AUD", "NZD"};
+			String[] potientalwonconversions = {"USD", "CAD", "GBP", "EUR", "CHF",
+					"JPY", "CNY", "HKD", "INR", "AUD", "NZD", "HTG", "HKR", "MXN"};
 				/*Based on potientalwonconversions array. Currency exchange rates of that array
 				Order based on the order of currencies. So first is the USD, and goes all the way to NZD
 				 */
-			double[] currencyresults = {0.0008811231, 0.0010987532, 0.00063824338, 0.00074266622, 0.00081311566,
-					0.097136717, 0.005685896, 0.0068397515, 0.065319022, 0.0011779859, 0.0012707189};
+			double[] currencyresults = {0.00088713332,
+					0.001090705,
+					0.00063871071,
+					0.00074323486,
+					0.00081473396,
+					0.098285588,
+					0.0057270997,
+					0.0068849683,
+					0.065819536,
+					0.0011704272,
+					0.0012552817,
+					0.082343466,
+					0.0055728683,
+					0.01757879};
 
 			System.out.println("Please select a currency you wish to convert to:" +
 					"\n" + Arrays.toString(potientalwonconversions));
@@ -777,20 +828,24 @@ emojis(countries/territories)*/
 		}
 		if (currencyconvert1.equals("INR") || currencyconvert1.equals("Indian rupee")) {
 			String[] indianconversions = {"USD", "CAD", "GBP", "EUR", "CHF" +
-					"\n", "JPY", "CNY", "HKD", "KRW", "AUD", "NZD"};
+					"\n", "JPY", "CNY", "HKD", "KRW", "AUD", "NZD", "HTG", "HRK", "MXN"};
 				/*Based on indianconversions array. Currency exchange rates of that array
 				Order based on the order of currencies. So first is the USD, and goes all the way to NZD
 				 */
-			double[] indianexchangerates = {0.013491,
-					0.0168279,
-					0.00977445,
-					0.0113734,
-					0.0124493,
-					1.48773,
-					0.0870872,
-					0.104741,
-					15.3159,
-					0.0180426, 0.0194577};
+			double[] indianexchangerates = {0.013478634,
+					0.01657218,
+					0.0097040523,
+					0.011292455,
+					0.012374242,
+					1.4933337,
+					0.087012939,
+					0.10461052,
+					15.193976,
+					0.017789571,
+					0.019074313,
+					1.2541429,
+					0.084661481,
+					0.26706922};
 
 			System.out.println("Please select a currency you wish to convert to:" +
 					"\n" + Arrays.toString(indianconversions));
@@ -847,20 +902,24 @@ emojis(countries/territories)*/
 		if (currencyconvert1.equals("AUD") || currencyconvert1.equals("Australian Dollar")) {
 			//  Player choices when choosing australian dollars
 			String[] aussieconversions = {"USD", "CAD", "GBP", "EUR", "CHF" +
-					"\n", "JPY", "CNY", "HKD", "INR", "KRW", "NZD"};
+					"\n", "JPY", "CNY", "HKD", "INR", "KRW", "NZD", "HTG", "HRK", "MXN"};
 				/*Based on indianconversions array. Currency exchange rates of that array
 				Order based on the order of currencies. So first is the USD, and goes all the way to NZD
 				 */
-			double[] aussieexchangerates = {0.74786779,
-					0.93264513,
-					0.54169693,
-					0.63036016,
-					0.68989251,
-					82.453305,
-					4.8260616,
-					5.8039562,
-					55.423019,
-					848.88694, 1.0785421};
+			double[] aussieexchangerates = {0.7576552,
+					0.93154306,
+					0.54538661,
+					0.6347393,
+					0.6956297,
+					83.943528,
+					4.8909596,
+					5.8798709,
+					56.207973,
+					853.96375,
+					1.0720983,
+					70.36036,
+					4.759412,
+					15.014489};
 
 			System.out.println("Please select a currency you wish to convert to:" +
 					"\n" + Arrays.toString(aussieconversions));
@@ -918,20 +977,24 @@ emojis(countries/territories)*/
 
 			//  Player choices when choosing australian dollars
 			String[] nzdconversions = {"USD", "CAD", "GBP", "EUR", "CHF" +
-					"\n", "JPY", "CNY", "HKD", "INR", "KRW", "AUD"};
+					"\n", "JPY", "CNY", "HKD", "INR", "KRW", "AUD", "HTG", "HRK", "MXN"};
 				/*Based on newleazandconversions array. Currency exchange rates of that array
 				Order based on the order of currencies. So first is the USD, and goes all the way to NZD
 				 */
-			double[] nzdexchangerates = {0.69343394,
-					0.86476732,
-					0.50229558,
-					0.58448133,
-					0.63973472,
-					76.437699,
-					4.4747442,
-					5.3831017,
-					51.411522,
-					787.03819, 0.92694341};
+			double[] nzdexchangerates = {0.70683276,
+					0.86906347,
+					0.50891807,
+					0.59212457,
+					0.64898728,
+					78.307804,
+					4.5621928,
+					5.4848988,
+					52.432823,
+					796.84492,
+					0.93281665,
+					65.614902,
+					4.4403515,
+					14.006664};
 // Selecting currency to choose too based on nzd currency conversion array
 			System.out.println("Please select a currency you wish to convert to:" +
 					"\n" + Arrays.toString(nzdconversions));
