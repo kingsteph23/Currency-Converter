@@ -3,7 +3,7 @@
 A currency converter that allows you to see how much x amount of money in one currency is in another currency.  Like saying how much 5 dollars in us dollars is worth in Japanese yen.  
 
 The current currencies conist of the following: 
-US DOLLARS, CANADIAN DOLLARS, BRITISH POUNDS, EUROS , SWISS FRANCS, JAPANESE YEN, CHINESE YUAN, HONG KONG DOLLARS, KOREAN WON, INDIAN RUPEES, AUSTRALIAN DOLLARS, AND NEW ZEALAND DOLLARS.  
+US DOLLARS, CANADIAN DOLLARS, BRITISH POUNDS, EUROS , SWISS FRANCS, JAPANESE YEN, CHINESE YUAN, HONG KONG DOLLARS, KOREAN WON, INDIAN RUPEES, AUSTRALIAN DOLLARS, croatian kunas, Haitian Gourde, and Mexican Pesos, NEW ZEALAND DOLLARS.  (As of 6/28)
 
 Currencies will be updated on a weekly bases with a change in exchange values of currency rates and new currency additions will be added.
 
@@ -11,7 +11,7 @@ For example:
 
 
 Selecting a currency, in this  case us dollars, and how much money we wish to convert
-<img width="911" alt="Screen Shot 2021-06-21 at 12 00 12 AM" src="https://user-images.githubusercontent.com/75145009/122705411-a93d7e80-d223-11eb-8f10-b8ac766767fe.png">
+<img width="790" alt="Screen Shot 2021-06-28 at 4 41 24 PM" src="https://user-images.githubusercontent.com/75145009/123701327-b3690980-d82f-11eb-82ce-9e1eaeca57bf.png">
 
 
 Selecting a currency to convert too, in this case, japanese yen
