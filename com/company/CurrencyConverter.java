@@ -165,20 +165,20 @@ emojis(countries/territories)*/
 			String[] muricanselectors = {"EUR", "CAD", "GBP", "CHF", "JPY",
 					"CNY", "HKD", "KRW", "INR", "AUD", "NZD", "HTG", "HRK", "MXN"};
 
-			double[] usdexchanges = {0.8378525,
-					1.22948,
-					0.72050246,
-					0.91770028,
-					110.80238,
-					6.4553835,
-					7.7619705,
-					1, 127.3826,
-					74.177887,
-					1.3181212,
-					1.413889,
-					94.500053,
-					6.2769846,
-					19.824989};
+			double[] usdexchanges = {0.83835206 ,
+					1.2335826,
+					0.72030522 ,
+					0.91919243,
+					110.53877,
+					6.4560868,
+					7.7619931,
+					1130.6365,
+					74.275198,
+					1.3213756,
+					1.4192552,
+					92.836658,
+					6.2840873,
+					19.812208};
 
 			System.out.println("Please select a currency to convert to of your choice:" +
 					"\n" + Arrays.toString(muricanselectors));
@@ -230,7 +230,22 @@ emojis(countries/territories)*/
 			} else if (usconverter.equals(muricanselectors[10])) {
 				double newzealanddollar = amount * usdexchanges[10];
 				System.out.println("" + amount + " USD =" + conversion.format(newzealanddollar) + " NZD");
+				// USD -> HTG
+			}else if (usconverter.equals(muricanselectors[11])) {
+				double haiticherie = amount * usdexchanges[11];
+				System.out.println("" + amount + " USD =" + conversion.format(haiticherie) + " HTG");
+				// USD -> HRK(Croatian kuna)
+			} else if (usconverter.equals(muricanselectors[12])) {
+				double zagrebbucks = amount * usdexchanges[12];
+				System.out.println("" + amount + " USD =" + conversion.format(zagrebbucks) + " HRK");
+				// USD-> MXN(Mexican pesos)
+			} else if (usconverter.equals(muricanselectors[13])) {
+				double mexicodolla = amount * usdexchanges[13];
+				System.out.println("" + amount + " USD =" + conversion.format(mexicodolla) + " MXN");
+
+
 			}
+
 			// conversions for Canadian dollar
 		}
 
@@ -239,20 +254,20 @@ emojis(countries/territories)*/
 			String[] candaianselector = {"USD", "EUR", "GBP", "CHF", "JPY",
 					"CNY", "HKD", "KRW", "INR", "AUD", "NZD","HTG","HRK","MXN"};
 
-			double[] canadianexchanges = {0.81335202,
-					0.68146902,
-					0.58602213,
-					0.74641337,
-					90.121339,
-					5.2504992,
-					6.313236,
-					916.96701,
-					60.330584,
-					1.0720934,
-					1.1499995,
-					76.862481,
-					5.1054429,
-					16.124949};
+			double[] canadianexchanges = {0.810554,
+					0.67963396,
+					0.58388961,
+					0.74511903,
+					89.591705,
+					5.233252,
+					6.2905938,
+					916.36407,
+					60.189995,
+					1.0711448,
+					1.1504785,
+					75.31686,
+					5.0929884,
+					16.049402};
 
 
 
@@ -305,6 +320,19 @@ emojis(countries/territories)*/
 			} else if (canadiancurrencies.equals(candaianselector[10])) {
 				double zealanddollar = amount * canadianexchanges[10];
 				System.out.println("" + amount + " CAD=" + conversion.format(zealanddollar) + " NZD");
+				// CAD -> HTG
+			}else if (canadiancurrencies.equals(candaianselector[11])) {
+				double zoebucks = amount * canadianexchanges[11];
+				System.out.println("" + amount + " CAD=" + conversion.format(zoebucks) + " HTG");
+				// CAD ->  HRK
+			} else if (canadiancurrencies.equals(candaianselector[12])) {
+				double slavbucks = amount * canadianexchanges[12];
+				System.out.println("" + amount + " CAD=" + conversion.format(slavbucks) + " HRK");
+				//  CAD ->  MXN
+			} else if (canadiancurrencies.equals(candaianselector[13])) {
+				double pesobucks = amount * canadianexchanges[13];
+				System.out.println("" + amount + " CAD=" + conversion.format(pesobucks) + " MXN");
+
 			}
 			// British currency conversion
 		}
@@ -312,20 +340,20 @@ emojis(countries/territories)*/
 			String[] britishpounds = {"USD", "CAD", "EUR", "CHF", "JPY",
 					"CNY", "HKD", "KRW", "INR", "AUD", "NZD", "HTG", "HRK", "MXN"};
 			// british exchanges rates based on british pounds array
-			double[] britishexchanges = {1.3896621,
-					1.7086516,
-					1.1643368,
-					1.2755846,
-					153.93983,
-					8.972421,
-					10.786759,
-					1566.8003,
-					103.10119,
-					1.832998,
-					1.9652243,
-					129.00479,
-					8.7298127,
-					27.534986};
+			double[] britishexchanges = {1.3878456,
+					1.7126065,
+					1.1637854,
+					1.2762759,
+					153.40546,
+					8.9597239,
+					10.771369,
+					1569.3489,
+					1103.0423,
+					1.8341399,
+					1.9705914,
+					128.84753,
+					8.7214906,
+					27.497044};
 
 			System.out.println("Select a currency you wish to convert to?: " +
 					"\n" + Arrays.toString(britishpounds));
@@ -376,29 +404,41 @@ emojis(countries/territories)*/
 			} else if (britishconversionoptions.equals(britishpounds[10])) {
 				double nzddollar = amount * britishexchanges[10];
 				System.out.println("" + amount + " GBP=" + conversion.format(nzddollar) + " NZD");
+				// GBP -> HTG
+			}else if (britishconversionoptions.equals(britishpounds[11])) {
+				double haitianddollas = amount * britishexchanges[11];
+				System.out.println("" + amount + " GBP=" + conversion.format(haitianddollas) + " HTG");
+				// GBP -> HRK
+			} else if (britishconversionoptions.equals(britishpounds[12])) {
+				double croatddollas = amount * britishexchanges[12];
+				System.out.println("" + amount + " GBP=" + conversion.format(croatddollas) + " HRK");
+				// GBP -> MXN
+			} else if (britishconversionoptions.equals(britishpounds[13])) {
+				double mexicanddollas = amount * britishexchanges[13];
+				System.out.println("" + amount + " GBP=" + conversion.format(mexicanddollas) + " MXN");
 			}
 		}
 
 		// Euro conversions
 		if (currencyconvert1.equals("EUR") || currencyconvert1.equals("Euros")) {
 			String[] euroconversionoptions = {"USD", "CAD", "GBP", "CHF", "JPY",
-					"CNY", "HKD", "KRW", "INR", "AUD", "NZD"};
+					"CNY", "HKD", "KRW", "INR", "AUD", "NZD","HTG","HRK","MXN"};
 // EURO currency exchange rates based on conversion options array
 
-			double[] euroexchanges = {1.1935435,
-					1.4675166,
-					0.8590882,
-					1.095764,
-					132.20582,
-					7.7050111,
-					9.2633229,
-					1345.5942,
-					88.549648,
-					1.5742671,
-					1.6875039,
-					110.77819,
-					7.4973875,
-					23.654266};
+			double[] euroexchanges = {1.192518,
+					1.4717208,
+					0.85933247,
+					1.0966219,
+					131.8389,
+					7.6991508,
+					9.2561885,
+					1348.5596,
+					88.56182,
+					1.5762709,
+					1.6934045,
+					110.71338,
+					7.4951563,
+					23.62066};
 
 
 			System.out.println("Please select a currency of your choice" +
@@ -452,6 +492,17 @@ emojis(countries/territories)*/
 				System.out.println("" + amount + " EUR=" + conversion.format(NZD) + " NZD");
 
 
+			}else if (euroselector.equals(euroconversionoptions[11])) {
+				double haitian = amount * euroexchanges[11];
+				System.out.println("" + amount + " EUR=" + conversion.format(haitian) + " HTG");
+// EUR -> HRK
+			} else if (euroselector.equals(euroconversionoptions[12])) {
+				double croatian = amount * euroexchanges[12];
+				System.out.println("" + amount + " EUR=" + conversion.format(croatian) + " HRK");
+// EUR -> MXN
+			} else if (euroselector.equals(euroconversionoptions[13])) {
+				double mexicanpesos = amount * euroexchanges[13];
+				System.out.println("" + amount + " EUR=" + conversion.format(mexicanpesos) + " MXN");
 			}
 // Conversions for  Swiss francs
 		}
@@ -460,20 +511,20 @@ emojis(countries/territories)*/
 			String[] swissconversion = {"USD", "CAD", "EUR", "GBP", "JPY",
 					"CNY", "HKD", "KRW", "INR", "AUD", "NZD","HTG","HRK","MXN"};
 // swiss exchanges based on swissconversion array
-			double[] swissexchanges = {1.0891802,
-					1.339196,
-					0.91284747,
-					0.78455427,
-					120.70571,
-					7.0331472,
-					8.4558061,
-					1228.2725,
-					80.80371,
-					1.4368032,
-					1.5405808,
-					101.48465,
-					6.8405835,
-					21.586139};
+			double[] swissexchanges = {1.0874317,
+					1.0874317,
+					0.91188028,
+					0.78357372,
+					120.23182,
+					7.020784,
+					8.4408763,
+					1229.5475,
+					80.755847,
+					1.4374353,
+					1.5443111,
+					100.95397,
+					6.8347993,
+					21.539828};
 			System.out.println("Please select a currency of your choice:" +
 					"\n" + Arrays.toString(swissconversion));
 			scan.nextLine();
@@ -522,6 +573,18 @@ emojis(countries/territories)*/
 			} else if (swissselector.equals(swissconversion[10])) {
 				double nzdoller = amount * swissexchanges[10];
 				System.out.println("" + amount + " CHF=" + conversion.format(nzdoller) + " NZD");
+				// CHF -> HTG
+			}else if (swissselector.equals(swissconversion[11])) {
+				double htdoller = amount * swissexchanges[11];
+				System.out.println("" + amount + " CHF=" + conversion.format(htdoller) + " HTG");
+// CHF -> HRK
+			} else if (swissselector.equals(swissconversion[12])) {
+				double croatdoller = amount * swissexchanges[12];
+				System.out.println("" + amount + " CHF=" + conversion.format(croatdoller) + " HRK");
+// CHF -> MXN
+			} else if (swissselector.equals(swissconversion[13])) {
+				double mexicandoller = amount * swissexchanges[13];
+				System.out.println("" + amount + " CHF=" + conversion.format(mexicandoller) + " MXN");
 			}
 
 
@@ -534,19 +597,19 @@ emojis(countries/territories)*/
 			String[] jpycurrencies = {"USD", "EUR", "CAD", "GBP", "HKD",
 					"CNY", "KRW", "INR", "AUD", "NZD", "HTG", "HRK", "MXN"};
 // jpy exchange rates based on jpycurrency array
-			double[] jpyexchangerates = {0.0090252854,
-					0.0075621801,
-					0.011097333,
-					0.0064973919,
-					0.070051201,
-					0.05826855,
-					10.17488,
-					0.66966838,
-					0.011904896,
-					0.012763449,
-					0.83827471,
-					0.056694686,
-					0.17886937};
+			double[] jpyexchangerates = {0.0090447217,
+					0.0075846184,
+					0.011163021,
+					0.0065180121,
+					0.070202966,
+					0.058395414,
+					10.227702,
+					0.67175252,
+					0.011956866,
+					0.012846427,
+					0.84147114,
+					0.056849225,
+					0.17921287};
 
 			System.out.println("Please select a currency of your choice:" + Arrays.toString(jpycurrencies));
 			scan.nextLine();
@@ -592,7 +655,19 @@ emojis(countries/territories)*/
 			} else if (jpyselector.equals(jpycurrencies[2])) {
 				double canadadollar = amount * jpyexchangerates[2];
 				System.out.println("" + amount + " JPY=" + conversion.format(canadadollar) + " CAD");
+			}else if (jpyselector.equals(jpycurrencies[10])) {
+				double gourdehaitien = amount * jpyexchangerates[10];
+				System.out.println("" + amount + " JPY=" + conversion.format(gourdehaitien) + " HTG");
+				// JPY -> HRK
+			} else if (jpyselector.equals(jpycurrencies[11])) {
+				double croatiebucks = amount * jpyexchangerates[11];
+				System.out.println("" + amount + " JPY=" + conversion.format(croatiebucks) + " HRK");
+				// JPY -> MXN
+			} else if (jpyselector.equals(jpycurrencies[12])) {
+				double mexicianpesos = amount * jpyexchangerates[12];
+				System.out.println("" + amount + " JPY=" + conversion.format(mexicianpesos) + " MXN");
 			}
+
 
 
 			// chinese yuan conversions
@@ -611,20 +686,20 @@ emojis(countries/territories)*/
 
 
 			// chinese currency exchanges
-			double[] chinacurrencyexchanges = {0.15489162,
-					0.11150764,
-					0.19044185,
-					0.12978363,
-					0.1422277,
-					17.161782,
-					1.2021664,
-					174.62463,
-					11.492887,
-					0.20435696,
-					0.21923473,
-					14.3791,
-					0.97302982,
-					3.0698236};
+			double[] chinacurrencyexchanges = {0.1548788,
+					0.11162999,
+					0.19117953,
+					0.12990358,
+					0.14244852 ,
+					17.126163,
+					1.2022775,
+					175.15111,
+					11.502633,
+					0.20477496 ,
+					0.2200106,
+					14.382634,
+					0.97353548,
+					3.0688448};
 
 
 			System.out.println("Please select a currency of your choice" +
@@ -675,30 +750,41 @@ emojis(countries/territories)*/
 			} else if (chinayuanselector.equals(chinayuancovert[10])) {
 				double nzdresults = amount * chinacurrencyexchanges[10];
 				System.out.println("" + amount + " CNY =" + conversion.format(nzdresults) + " NZD");
-
-
-// if player wishes to convert hong kong dollars
+				// CNY -> HTG
+			}else if (chinayuanselector.equals(chinayuancovert[11])) {
+				double haitiresults = amount * chinacurrencyexchanges[11];
+				System.out.println("" + amount + " CNY =" + conversion.format(haitiresults) + " HTG");
+				// CNY ->  HRK
+			}else if (chinayuanselector.equals(chinayuancovert[12])) {
+				double croatieresults = amount * chinacurrencyexchanges[12];
+				System.out.println("" + amount + " CNY =" + conversion.format(croatieresults) + " HRK");
+// CNY -> MXN
+			}else if (chinayuanselector.equals(chinayuancovert[13])) {
+				double mexicoresults = amount * chinacurrencyexchanges[13];
+				System.out.println("" + amount + " CNY =" + conversion.format(mexicoresults) + " MXN");
 			}
 
-		}
+			}
+
+		// if player wishes to convert hong kong dollars
 		if (currencyconvert1.equals("Hong Kong Dollar") || currencyconvert1.equals("HKD")) {
 			String[] HKDconversions = {"USD", "CAD", "EUR", "GBP", "CHF",
 					"\n" + "JPY", "CNY", "KRW", "INR", "AUD", "NZD", "HTG", "HRK", "MXN"};
 // currency exchange rates based on  hkd currencies array
-			double[] hkcurrencyexchange = {0.12884056,
-					0.15840684,
-					0.10795292,
-					0.092747291,
-					0.11830891,
-					14.27569,
-					0.83179533,
-					145.24931,
-					9.5597888,
-					0.16995157,
-					0.18240799,
-					11.959454,
-					0.80939376,
-					2.5537292};
+			double[] hkcurrencyexchange = {0.12883176 ,
+					0.15902628,
+					0.1080503,
+					0.09284315,
+					0.11849547,
+					14.246892,
+					0.8319018,
+					145.67692,
+					9.5693665,
+					0.1702951,
+					0.18294883,
+					11.960528,
+					0.80983105,
+					2.552073};
 			//
 			System.out.println("Select a currency to convert to" +
 					"\n" + Arrays.toString(HKDconversions));
@@ -749,29 +835,41 @@ emojis(countries/territories)*/
 			} else if (hkconverter.equals(HKDconversions[10])) {
 				double nzdollas = amount * hkcurrencyexchange[10];
 				System.out.println("" + amount + " HKD =" + conversion.format(nzdollas) + " NZD");
+				// HKD -> HTG
+			}else if (hkconverter.equals(HKDconversions[11])) {
+				double gourdes = amount * hkcurrencyexchange[11];
+				System.out.println("" + amount + " HKD =" + conversion.format(gourdes) + " HTG");
+				// HKD -> HRK
+			} else if (hkconverter.equals(HKDconversions[12])) {
+				double kunas = amount * hkcurrencyexchange[12];
+				System.out.println("" + amount + " HKD =" + conversion.format(kunas) + " HRK");
+				// HKD -> MXN
+			} else if (hkconverter.equals(HKDconversions[13])) {
+				double mexiquepesos = amount * hkcurrencyexchange[13];
+				System.out.println("" + amount + " HKD =" + conversion.format(mexiquepesos) + " MXN");
 			}
 			// if player wishes to use south korean won
 		}
 		if (currencyconvert1.equals("KRW") || currencyconvert1.equals("South Korean won")) {
 			String[] potientalwonconversions = {"USD", "CAD", "GBP", "EUR", "CHF",
-					"JPY", "CNY", "HKD", "INR", "AUD", "NZD", "HTG", "HKR", "MXN"};
+					"JPY", "CNY", "HKD", "INR", "AUD", "NZD", "HTG", "HRK", "MXN"};
 				/*Based on potientalwonconversions array. Currency exchange rates of that array
 				Order based on the order of currencies. So first is the USD, and goes all the way to NZD
 				 */
-			double[] currencyresults = {0.00088713332,
-					0.001090705,
-					0.00063871071,
-					0.00074323486,
-					0.00081473396,
-					0.098285588,
-					0.0057270997,
-					0.0068849683,
-					0.065819536,
-					0.0011704272,
-					0.0012552817,
-					0.082343466,
-					0.0055728683,
-					0.01757879};
+			double[] currencyresults = {0.00088445472,
+					0.0010918261,
+					0.00063740081,
+					0.00074190987,
+					0.00081356736,
+					0.097822713,
+					0.0057116846 ,
+					0.0068659194,
+					0.06569063,
+					0.0011691843 ,
+					0.001256011,
+					0.082430948,
+					0.0055591241,
+					0.017517982};
 
 			System.out.println("Please select a currency you wish to convert to:" +
 					"\n" + Arrays.toString(potientalwonconversions));
@@ -822,7 +920,18 @@ emojis(countries/territories)*/
 				double newzealandbucks = amount * currencyresults[10];
 				System.out.println("" + amount + " KRW =" + conversion.format(newzealandbucks) + " NZD");
 
-
+				// KRW -> HTG
+			}else if (woncurrencyresults.equals(potientalwonconversions[11])) {
+				double zoepoundbucks = amount * currencyresults[11];
+				System.out.println("" + amount + " KRW =" + conversion.format(zoepoundbucks) + " HTG");
+// KRW -> HRK
+			} else if (woncurrencyresults.equals(potientalwonconversions[12])) {
+				double slavicbucks = amount * currencyresults[12];
+				System.out.println("" + amount + " KRW =" + conversion.format(slavicbucks) + " HRK");
+// KRW -> MXN
+			} else if (woncurrencyresults.equals(potientalwonconversions[13])) {
+				double vivamexicobucks = amount * currencyresults[13];
+				System.out.println("" + amount + " KRW =" + conversion.format(vivamexicobucks) + " MXN");
 			}
 			// INDIAN RUPEE CURRENCIES
 		}
@@ -832,20 +941,20 @@ emojis(countries/territories)*/
 				/*Based on indianconversions array. Currency exchange rates of that array
 				Order based on the order of currencies. So first is the USD, and goes all the way to NZD
 				 */
-			double[] indianexchangerates = {0.013478634,
-					0.01657218,
-					0.0097040523,
-					0.011292455,
-					0.012374242,
-					1.4933337,
-					0.087012939,
-					0.10461052,
-					15.193976,
-					0.017789571,
-					0.019074313,
-					1.2541429,
-					0.084661481,
-					0.26706922};
+			double[] indianexchangerates = {0.013464294,
+					0.016618974 ,
+					0.0097019789,
+					0.01129091,
+					0.01238228,
+					1.488783,
+					0.086928313,
+					0.10451013 ,
+					15.216049,
+					0.017794842,
+					0.019117068,
+					1.2509995,
+					0.084616193,
+					0.26668204};
 
 			System.out.println("Please select a currency you wish to convert to:" +
 					"\n" + Arrays.toString(indianconversions));
@@ -895,6 +1004,18 @@ emojis(countries/territories)*/
 			} else if (indianresults.equals(indianconversions[10])) {
 				double newzealandresults = amount * indianexchangerates[10];
 				System.out.println("" + amount + " INR =" + conversion.format(newzealandresults) + " NZD");
+				// INR -> HTG
+			}else if (indianresults.equals(indianconversions[11])) {
+				double haitiengourde = amount * indianexchangerates[11];
+				System.out.println("" + amount + " INR =" + conversion.format(haitiengourde) + " HTG");
+				// INR -> HRK
+			} else if (indianresults.equals(indianconversions[12])) {
+				double slavickunas = amount * indianexchangerates[12];
+				System.out.println("" + amount + " INR =" + conversion.format(slavickunas) + " HRK");
+				// INR -> MXN
+			} else if (indianresults.equals(indianconversions[13])) {
+				double vivapesos = amount * indianexchangerates[13];
+				System.out.println("" + amount + " INR =" + conversion.format(vivapesos) + " INR");
 			}
 // if player decides to choose  Australian dollar
 
@@ -906,20 +1027,20 @@ emojis(countries/territories)*/
 				/*Based on indianconversions array. Currency exchange rates of that array
 				Order based on the order of currencies. So first is the USD, and goes all the way to NZD
 				 */
-			double[] aussieexchangerates = {0.7576552,
-					0.93154306,
-					0.54538661,
-					0.6347393,
-					0.6956297,
-					83.943528,
-					4.8909596,
-					5.8798709,
-					56.207973,
-					853.96375,
-					1.0720983,
-					70.36036,
-					4.759412,
-					15.014489};
+			double[] aussieexchangerates = {0.26668204,
+					0.93392476,
+					0.54523281,
+					0.63455687,
+					0.69586911,
+					83.682119,
+					4.8855211,
+					5.8735144 ,
+					56.195684,
+					855.2197,
+					1.0743797,
+					70.255129,
+					4.7561792,
+					14.990436};
 
 			System.out.println("Please select a currency you wish to convert to:" +
 					"\n" + Arrays.toString(aussieconversions));
@@ -965,10 +1086,22 @@ emojis(countries/territories)*/
 			} else if (aussieresults.equals(aussieconversions[9])) {
 				double aussiebucksresults = amount * aussieexchangerates[9];
 				System.out.println("" + amount + " AUD =" + conversion.format(aussiebucksresults) + " KRW");
-				// INR -> NZD
+				// AUD -> NZD
 			} else if (aussieresults.equals(aussieconversions[10])) {
 				double newzealandresults = amount * aussieexchangerates[10];
 				System.out.println("" + amount + " AID =" + conversion.format(newzealandresults) + " NZD");
+				// AUD -> HTG
+			}else if (aussieresults.equals(aussieconversions[11])) {
+				double hispanolabucks = amount * aussieexchangerates[11];
+				System.out.println("" + amount + " AUD =" + conversion.format(hispanolabucks) + " HTG");
+// AUD -> HRK
+			} else if (aussieresults.equals(aussieconversions[12])) {
+				double balkandollas = amount * aussieexchangerates[12];
+				System.out.println("" + amount + " AUD =" + conversion.format(balkandollas) + " HRK");
+//  AUD -> MXN
+			} else if (aussieresults.equals(aussieconversions[13])) {
+				double centralamericabucks = amount * aussieexchangerates[13];
+				System.out.println("" + amount + " AUD =" + conversion.format(centralamericabucks) + " MXN");
 			}
 // if player wants to convert from  new zealand dollars
 
@@ -981,20 +1114,20 @@ emojis(countries/territories)*/
 				/*Based on newleazandconversions array. Currency exchange rates of that array
 				Order based on the order of currencies. So first is the USD, and goes all the way to NZD
 				 */
-			double[] nzdexchangerates = {0.70683276,
-					0.86906347,
-					0.50891807,
-					0.59212457,
-					0.64898728,
-					78.307804,
-					4.5621928,
-					5.4848988,
-					52.432823,
-					796.84492,
-					0.93281665,
-					65.614902,
-					4.4403515,
-					14.006664};
+			double[] nzdexchangerates = {0.7043073,
+					0.86925779,
+					0.50749509,
+					0.50749509,
+					0.64765114 ,
+					77.881003,
+					4.5471157,
+					5.4663209,
+					52.294284,
+					796.2045,
+					0.93071463,
+					65.374863,
+					4.4272178,
+					4.4272178};
 // Selecting currency to choose too based on nzd currency conversion array
 			System.out.println("Please select a currency you wish to convert to:" +
 					"\n" + Arrays.toString(nzdconversions));
@@ -1044,6 +1177,18 @@ emojis(countries/territories)*/
 			} else if (nzdresults.equals(nzdconversions[10])) {
 				double newzealandresults = amount * nzdexchangerates[10];
 				System.out.println("" + amount + " NZD =" + conversion.format(newzealandresults) + " AUD");
+				// NZD -> HTG
+			}else if (nzdresults.equals(nzdconversions[11])) {
+				double htgbucks = amount * nzdexchangerates[11];
+				System.out.println("" + amount + " NZD =" + conversion.format(htgbucks) + " HTG");
+				// NZD -> HRK
+			} else if (nzdresults.equals(nzdconversions[12])) {
+				double hrkdollas = amount * nzdexchangerates[12];
+				System.out.println("" + amount + " NZD =" + conversion.format(hrkdollas) + " HRK");
+				// NZD -> MXN
+			} else if (nzdresults.equals(nzdconversions[13])) {
+				double mxnbucks = amount * nzdexchangerates[13];
+				System.out.println("" + amount + " NZD =" + conversion.format(mxnbucks) + " MXN");
 			}
 			// if player decides to convert haitian currencies
 		}
@@ -1051,20 +1196,20 @@ emojis(countries/territories)*/
 			String[] htgconversions = {"USD", "CAD", "GBP", "EUR", "CHF" +
 					"\n", "JPY", "CNY", "HKD", "INR", "KRW", "AUD", "NZD", "MXN", "HRK"};
 // haitian currency exchange rates
-			double[] htgexchanges = {0.010582005,
-					0.013013648,
-					0.0076222255,
-					0.0088665181,
-					0.0097087868,
-					1.1724261,
-					0.06830844,
-					0.082137249,
-					0.7848665,
-					11.929971,
-					0.013934393,
-					0.014974283,
-					0.2097716,
-					0.066426214};
+			double[] htgexchanges = {0.010743448,
+					0.013261766,
+					0.007741704,
+					0.009010012 ,
+					0.0098638676 ,
+					1.186305,
+					0.069248318,
+					0.083256269,
+					0.79668294,
+					12.151811 ,
+					0.014206867,
+					0.015263384,
+					0.21308671,
+					0.067610529};
 			System.out.println("Please select a currency you wish to convert to:" +
 					"\n" + Arrays.toString(htgconversions));
 			scan.nextLine();
@@ -1133,20 +1278,20 @@ emojis(countries/territories)*/
 			String[] kunaconversions = {"USD", "CAD", "GBP", "EUR", "CHF" +
 					"\n", "JPY", "CNY", "HKD", "INR", "KRW", "AUD", "NZD", "HTG", "MXN"};
 // croatian currency exchange rates
-			double[] kunaexchange = {0.15930466,
-					0.19588622,
-					0.1147556,
-					0.13347511,
-					0.14611796,
-					17.652264,
-					1.0283665,
-					1.2364995,
-					11.819632,
-					179.59731,
-					0.20979792,
-					0.22538012,
-					15.054298,
-					3.1578917,};
+			double[] kunaexchange = {0.15910053,
+					0.19637593,
+					0.11464166,
+					0.13341894,
+					0.14629917,
+					17.597213,
+					1.0273129,
+					1.2350565,
+					11.817843,
+					179.92353,
+					0.21032429,
+					0.22594849,
+					14.775891,
+					3.1544329};
 
 			System.out.println("Please select a currency you wish to convert to:" +
 					"\n" + Arrays.toString(kunaconversions));
@@ -1214,20 +1359,20 @@ emojis(countries/territories)*/
 			String[] mexicanpesoconversions = {"USD", "CAD", "GBP", "EUR", "CHF" +
 					"\n", "JPY", "CNY", "HKD", "INR", "KRW", "AUD", "NZD", "HTG", "HRK"};
 // mexican currency exchange rates for the conversion array above
-			double[] mexicanexchange = {0.050449379,
-					0.06203752,
-					0.036337057,
-					0.042267678,
-					0.046282677,
-					5.58915,
-					0.32564461,
-					0.39156383,
-					3.7417917,
-					56.872748,
-					0.066433998,
-					0.071370695,
-					4.7672159,
-					0.3166668};
+			double[] mexicanexchange = {0.050445886,
+					0.062273946,
+					0.062273946,
+					0.042301893,
+					0.046388797,
+					5.5795476,
+					0.32555336,
+					0.39137258,
+					0.39137258,
+					0.39137258,
+					0.066648992,
+					0.071607296,
+					4.6851848 ,
+					4.6851848 };
 
 			System.out.println("Please select a currency you wish to convert to:" +
 					"\n" + Arrays.toString(mexicanpesoconversions));
