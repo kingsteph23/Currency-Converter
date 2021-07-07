@@ -187,22 +187,29 @@ emojis(countries/territories)*/
 // Conversions for US dollars
 		if (currencyconvert1.equals("US dollar") || (currencyconvert1.equals("USD"))) {
 			String[] muricanselectors = {"EUR", "CAD", "GBP", "CHF", "JPY",
-					"CNY", "HKD", "KRW", "INR", "AUD", "NZD", "HTG", "HRK", "MXN"};
+					"CNY", "HKD", "KRW", "INR", "AUD", "NZD", "HTG", "HRK", "MXN",
+					"DOP", "RUB", "BRL", "TRY", "MAD","ZAR"};
 
-			double[] usdexchanges = {0.83835206,
-					1.2335826,
-					0.72030522,
-					0.91919243,
-					110.53877,
-					6.4560868,
-					7.7619931,
-					1130.6365,
-					74.275198,
-					1.3213756,
-					1.4192552,
-					92.836658,
-					6.2840873,
-					19.812208};
+			double[] usdexchanges = {0.84585934,
+					1.2458876,
+					0.72458925,
+					0.92475727,
+					110.63821,
+					6.4787226 ,
+					7.7678381,
+					1137.1167,
+					74.749936,
+					1.3343848,
+					1.426094,
+					92.038629,
+					6.3315703,
+					20.028229,
+					57.125548,
+					74.322906,
+					5.2001166 ,
+					8.6940042,
+					8.9451126,
+					14.361101};
 
 			System.out.println("Please select a currency to convert to of your choice:" +
 					"\n" + Arrays.toString(muricanselectors));
@@ -268,7 +275,31 @@ emojis(countries/territories)*/
 				System.out.println("" + amount + " USD =" + conversion.format(mexicodolla) + " MXN");
 
 
-			}
+			}else if (usconverter.equals(muricanselectors[14])) {
+			double russianresult = amount * usdexchanges[14];
+			System.out.println("" + amount + "USD = " + conversion.format(russianresult) + " DOP");
+//  USD -> RUB
+		}else if (usconverter.equals(muricanselectors[15])) {
+			double brazilrealresult = amount *usdexchanges[15];
+			System.out.println("" + amount + " USD = " + conversion.format(brazilrealresult) + " RUB");
+// USD-> BRL
+		}else if (usconverter.equals(muricanselectors[16])) {
+			double turkishresult = amount * usdexchanges[16];
+			System.out.println("" + amount + "USD = " + conversion.format(turkishresult) + " BRL");
+//   USD -> MAD
+		}else if (usconverter.equals(muricanselectors[17])) {
+			double nordafricanresult = amount * usdexchanges[17];
+			System.out.println("" + amount + "  USD = " + conversion.format(nordafricanresult) + " TRY");
+//USD -> MAD
+		}else if (usconverter.equals(muricanselectors[18])) {
+			double morrocoresult = amount *  usdexchanges[18];
+			System.out.println("" + amount + " USD = " + conversion.format(morrocoresult) + "MAD");
+
+			//  USD-> ZAR
+		}else if (usconverter.equals(muricanselectors[19])) {
+			double saresult = amount * usdexchanges[19];
+			System.out.println("" + amount +"V = " + conversion.format(saresult) + "ZAR");
+		}
 
 			// conversions for Canadian dollar
 		}
@@ -276,22 +307,28 @@ emojis(countries/territories)*/
 		if (currencyconvert1.equals("Canadian Dollar") || currencyconvert1.equals("CAD")) {
 // All canadian potential options
 			String[] candaianselector = {"USD", "EUR", "GBP", "CHF", "JPY",
-					"CNY", "HKD", "KRW", "INR", "AUD", "NZD", "HTG", "HRK", "MXN"};
+					"CNY", "HKD", "KRW", "INR", "AUD", "NZD", "HTG", "HRK", "MXN","DOP", "RUB", "BRL", "TRY", "MAD","ZAR"};
 
-			double[] canadianexchanges = {0.810554,
-					0.67963396,
-					0.58388961,
-					0.74511903,
-					89.591705,
-					5.233252,
-					6.2905938,
-					916.36407,
-					60.189995,
-					1.0711448,
-					1.1504785,
-					75.31686,
-					5.0929884,
-					16.049402};
+			double[] canadianexchanges = {0.802661,
+					0.67880239,
+					0.58154713,
+					0.74197394,
+					88.791914,
+					5.2007658,
+					6.2351161,
+					912.87151 ,
+					60.014548,
+					1.0708801,
+					1.1450251,
+					73.821295,
+					5.0812734,
+					16.075755,
+					45.853624,
+					59.807151,
+					4.1797216,
+					6.9749077,
+					7.1809248,
+					11.526731};
 
 
 			System.out.println("Select a currency you wish to convert to?:" +
@@ -356,27 +393,58 @@ emojis(countries/territories)*/
 				double pesobucks = amount * canadianexchanges[13];
 				System.out.println("" + amount + " CAD=" + conversion.format(pesobucks) + " MXN");
 
-			}
+
+		}else if (canadiancurrencies.equals(candaianselector[14])) {
+			double russianresult = amount * canadianexchanges[14];
+			System.out.println("" + amount + "CAD = " + conversion.format(russianresult) + " DOP");
+//  CAD -> RUB
+		}else if (canadiancurrencies.equals(candaianselector[15])) {
+			double brazilrealresult = amount *canadianexchanges[15];
+			System.out.println("" + amount + " CAD = " + conversion.format(brazilrealresult) + " RUB");
+// CAD-> BRL
+		}else if (canadiancurrencies.equals(candaianselector[16])) {
+			double turkishresult = amount * canadianexchanges[16];
+			System.out.println("" + amount + "CAD = " + conversion.format(turkishresult) + " BRL");
+//   CAD -> MAD
+		}else if (canadiancurrencies.equals(candaianselector[17])) {
+			double nordafricanresult = amount * canadianexchanges[17];
+			System.out.println("" + amount + "  CAD = " + conversion.format(nordafricanresult) + " TRY");
+// CAD -> MAD
+		}else if (canadiancurrencies.equals(candaianselector[18])) {
+			double morrocoresult = amount *  canadianexchanges[18];
+			System.out.println("" + amount + " CAD = " + conversion.format(morrocoresult) + "MAD");
+
+			//  CAD-> ZAR
+		}else if (canadiancurrencies.equals(candaianselector[19])) {
+			double saresult = amount * canadianexchanges[19];
+			System.out.println("" + amount +"CAD = " + conversion.format(saresult) + "ZAR");
+		}
 			// British currency conversion
 		}
 		if (currencyconvert1.equals("Pounds") || currencyconvert1.equals("GBP")) {
 			String[] britishpounds = {"USD", "CAD", "EUR", "CHF", "JPY",
-					"CNY", "HKD", "KRW", "INR", "AUD", "NZD", "HTG", "HRK", "MXN"};
+					"CNY", "HKD", "KRW", "INR", "AUD", "NZD", "HTG", "HRK", "MXN","DOP", "RUB", "BRL", "TRY", "MAD","ZAR"};
 			// british exchanges rates based on british pounds array
-			double[] britishexchanges = {1.3878456,
-					1.7126065,
-					1.1637854,
-					1.2762759,
-					153.40546,
-					8.9597239,
-					10.771369,
-					1569.3489,
-					1103.0423,
-					1.8341399,
-					1.9705914,
-					128.84753,
-					8.7214906,
-					27.497044};
+			double[] britishexchanges = {1.3801117,
+					1.7193224,
+					1.1671444,
+					1.2754596,
+					152.63012,
+					8.9399756,
+					10.717605,
+					1568.7721,
+					103.15294 ,
+					1.8410504,
+					1.9680196,
+					126.26072,
+					8.7370688,
+					27.627174,
+					78.84035,
+					102.78641,
+					7.1707613,
+					11.990188,
+					12.346295,
+					19.853628};
 
 			System.out.println("Select a currency you wish to convert to?: " +
 					"\n" + Arrays.toString(britishpounds));
@@ -439,29 +507,60 @@ emojis(countries/territories)*/
 			} else if (britishconversionoptions.equals(britishpounds[13])) {
 				double mexicanddollas = amount * britishexchanges[13];
 				System.out.println("" + amount + " GBP=" + conversion.format(mexicanddollas) + " MXN");
-			}
+
+			}else if (britishconversionoptions.equals(britishpounds[14])) {
+			double russianresult = amount * britishexchanges[14];
+			System.out.println("" + amount + "GBP = " + conversion.format(russianresult) + " DOP");
+//  GBP -> RUB
+		}else if (britishconversionoptions.equals(britishpounds[15])) {
+			double brazilrealresult = amount * britishexchanges[15];
+			System.out.println("" + amount + " GBP = " + conversion.format(brazilrealresult) + " RUB");
+// GBP -> BRL
+		}else if (britishconversionoptions.equals(britishpounds[16])) {
+			double turkishresult = amount * britishexchanges[16];
+			System.out.println("" + amount + "GBP = " + conversion.format(turkishresult) + " BRL");
+//   GBP -> MAD
+		}else if (britishconversionoptions.equals(britishpounds[17])) {
+			double nordafricanresult = amount * britishexchanges[17];
+			System.out.println("" + amount + "  GBP = " + conversion.format(nordafricanresult) + " TRY");
+// GBP -> MAD
+		}else if (britishconversionoptions.equals(britishpounds[18])) {
+			double morrocoresult = amount *  britishexchanges[18];
+			System.out.println("" + amount + " GBP = " + conversion.format(morrocoresult) + "MAD");
+
+			//  GBP-> ZAR
+		}else if (britishconversionoptions.equals(britishpounds[19])) {
+			double saresult = amount *  britishexchanges[19];
+			System.out.println("" + amount +"GBP = " + conversion.format(saresult) + "ZAR");
+		}
 		}
 
 		// Euro conversions
 		if (currencyconvert1.equals("EUR") || currencyconvert1.equals("Euros")) {
 			String[] euroconversionoptions = {"USD", "CAD", "GBP", "CHF", "JPY",
-					"CNY", "HKD", "KRW", "INR", "AUD", "NZD", "HTG", "HRK", "MXN"};
+					"CNY", "HKD", "KRW", "INR", "AUD", "NZD", "HTG", "HRK", "MXN","DOP", "RUB", "BRL", "TRY", "MAD","ZAR"};
 // EURO currency exchange rates based on conversion options array
 
-			double[] euroexchanges = {1.192518,
-					1.4717208,
-					0.85933247,
-					1.0966219,
-					131.8389,
-					7.6991508,
-					9.2561885,
-					1348.5596,
-					88.56182,
-					1.5762709,
-					1.6934045,
-					110.71338,
-					7.4951563,
-					23.62066};
+			double[] euroexchanges = {1.1820081,
+					1.4730674,
+					0.85644636,
+					1.0928493,
+					130.76688,
+					7.6584121,
+					9.1816647,
+					1344.0893,
+					88.399817,
+					1.5776713,
+					1.6860263,
+					108.47104,
+					7.4861322,
+					23.67076,
+					67.535796,
+					88.064635,
+					6.143627,
+					10.272657,
+					10.57939,
+					16.997018};
 
 
 			System.out.println("Please select a currency of your choice" +
@@ -526,28 +625,59 @@ emojis(countries/territories)*/
 			} else if (euroselector.equals(euroconversionoptions[13])) {
 				double mexicanpesos = amount * euroexchanges[13];
 				System.out.println("" + amount + " EUR=" + conversion.format(mexicanpesos) + " MXN");
-			}
+
+			}else if (euroselector.equals(euroconversionoptions[14])) {
+			double russianresult = amount * euroexchanges[14];
+			System.out.println("" + amount + "EUR = " + conversion.format(russianresult) + " DOP");
+//  EUR -> RUB
+		}else if (euroselector.equals(euroconversionoptions[15])) {
+			double brazilrealresult = amount * euroexchanges[15];
+			System.out.println("" + amount + " EUR = " + conversion.format(brazilrealresult) + " RUB");
+// EUR -> BRL
+		}else if (euroselector.equals(euroconversionoptions[16])) {
+			double turkishresult = amount * euroexchanges[16];
+			System.out.println("" + amount + " EUR = " + conversion.format(turkishresult) + " BRL");
+//   EUR -> MAD
+		}else if (euroselector.equals(euroconversionoptions[17])) {
+			double nordafricanresult = amount * euroexchanges[17];
+			System.out.println("" + amount + "  EUR = " + conversion.format(nordafricanresult) + " TRY");
+// EUR -> MAD
+		}else if (euroselector.equals(euroconversionoptions[18])) {
+			double morrocoresult = amount *  euroexchanges[18];
+			System.out.println("" + amount + " EUR = " + conversion.format(morrocoresult) + "MAD");
+
+			//  EUR-> ZAR
+		}else if (euroselector.equals(euroconversionoptions[19])) {
+			double saresult = amount *  euroexchanges[19];
+			System.out.println("" + amount +"EUR = " + conversion.format(saresult) + "ZAR");
+		}
 // Conversions for  Swiss francs
 		}
 		if (currencyconvert1.equals("Swiss franc") || currencyconvert1.equals("CHF")) {
 
 			String[] swissconversion = {"USD", "CAD", "EUR", "GBP", "JPY",
-					"CNY", "HKD", "KRW", "INR", "AUD", "NZD", "HTG", "HRK", "MXN"};
+					"CNY", "HKD", "KRW", "INR", "AUD", "NZD", "HTG", "HRK", "MXN","DOP", "RUB", "BRL", "TRY", "MAD","ZAR"};
 // swiss exchanges based on swissconversion array
-			double[] swissexchanges = {1.0874317,
-					1.0874317,
-					0.91188028,
-					0.78357372,
-					120.23182,
-					7.020784,
-					8.4408763,
-					1229.5475,
-					80.755847,
-					1.4374353,
-					1.5443111,
-					100.95397,
-					6.8347993,
-					21.539828};
+			double[] swissexchanges = {1.0815714,
+					1.3475556,
+					0.91497272,
+					0.7836186,
+					119.65409,
+					7.007072,
+					8.4010197,
+					1229.8797,
+					80.854403,
+					1.443059,
+					1.5426652,
+					98.963965,
+					6.848509 ,
+					6.848509 ,
+					61.801609,
+					80.57649,
+					5.6207972,
+					9.3996396,
+					9.6786985,
+					15.546845};
 			System.out.println("Please select a currency of your choice:" +
 					"\n" + Arrays.toString(swissconversion));
 			scan.nextLine();
@@ -608,31 +738,63 @@ emojis(countries/territories)*/
 			} else if (swissselector.equals(swissconversion[13])) {
 				double mexicandoller = amount * swissexchanges[13];
 				System.out.println("" + amount + " CHF=" + conversion.format(mexicandoller) + " MXN");
-			}
+
+		}else if (swissselector.equals(swissconversion[14])) {
+			double russianresult = amount *swissexchanges[14];
+			System.out.println("" + amount + "CHF = " + conversion.format(russianresult) + " DOP");
+//  CHF -> RUB
+		}else if (swissselector.equals(swissconversion[15])) {
+			double brazilrealresult = amount *swissexchanges[15];
+			System.out.println("" + amount + " CHF = " + conversion.format(brazilrealresult) + " RUB");
+// CHF -> BRL
+		}else if (swissselector.equals(swissconversion[16])) {
+			double turkishresult = amount *swissexchanges[16];
+			System.out.println("" + amount + " CHF = " + conversion.format(turkishresult) + " BRL");
+//   CHF -> MAD
+		}else if (swissselector.equals(swissconversion[17])) {
+			double nordafricanresult = amount *swissexchanges[17];
+			System.out.println("" + amount + "  CHF = " + conversion.format(nordafricanresult) + " TRY");
+// CHF -> MAD
+		}else if (swissselector.equals(swissconversion[18])) {
+			double morrocoresult = amount * swissexchanges[18];
+			System.out.println("" + amount + " CHF = " + conversion.format(morrocoresult) + "MAD");
+
+			//  CHF-> ZAR
+		}else if (swissselector.equals(swissconversion[19])) {
+			double saresult = amount * swissexchanges[19];
+			System.out.println("" + amount +"CHF = " + conversion.format(saresult) + "ZAR");
+		}
 
 
-			//if player choses yen
+
+		//if player choses yen
 		}
 		if (currencyconvert1.equals("Japanese Yen") || currencyconvert1.equals("JPY")) {
 			/* japanese yen potential conversions(in a array to store them rather
 			how i did it prior(The whole double system.Prints out all currencies rather than specific one)
 			 */
 			String[] jpycurrencies = {"USD", "EUR", "CAD", "GBP", "HKD",
-					"CNY", "KRW", "INR", "AUD", "NZD", "HTG", "HRK", "MXN"};
+					"CNY", "KRW", "INR", "AUD", "NZD", "HTG", "HRK", "MXN","DOP", "RUB", "BRL", "TRY", "MAD","ZAR"};
 // jpy exchange rates based on jpycurrency array
-			double[] jpyexchangerates = {0.0090447217,
-					0.0075846184,
-					0.011163021,
-					0.0065180121,
-					0.070202966,
-					0.058395414,
-					10.227702,
-					0.67175252,
-					0.011956866,
-					0.012846427,
-					0.84147114,
-					0.056849225,
-					0.17921287};
+			double[] jpyexchangerates = {0.0090392081 ,
+					0.0076457116,
+					0.011262115,
+					0.0065484059,
+					0.070210822 ,
+					0.058568952,
+					10.277719,
+					0.67580093,
+					0.012059376,
+					0.012893229,
+					0.82703577,
+					0.057236687,
+					0.057236687,
+					0.51630183,
+					0.67345538,
+					0.046981552,
+					0.078559907,
+					0.080888066 ,
+					0.12994979};
 
 			System.out.println("Please select a currency of your choice:" + Arrays.toString(jpycurrencies));
 			scan.nextLine();
@@ -689,7 +851,32 @@ emojis(countries/territories)*/
 			} else if (jpyselector.equals(jpycurrencies[12])) {
 				double mexicianpesos = amount * jpyexchangerates[12];
 				System.out.println("" + amount + " JPY=" + conversion.format(mexicianpesos) + " MXN");
-			}
+
+			}else if (jpyselector.equals(jpycurrencies[13])) {
+			double russianresult = amount *jpyexchangerates[13];
+			System.out.println("" + amount + " JPY = " + conversion.format(russianresult) + " DOP");
+//  JPY -> RUB
+		}else if (jpyselector.equals(jpycurrencies[14])) {
+			double brazilrealresult = amount *jpyexchangerates[14];
+			System.out.println("" + amount + "  JPY = " + conversion.format(brazilrealresult) + " RUB");
+// JPY -> BRL
+		}else if (jpyselector.equals(jpycurrencies[15])) {
+			double turkishresult = amount *jpyexchangerates[15];
+			System.out.println("" + amount + " JPY = " + conversion.format(turkishresult) + " BRL");
+//   JPY -> MAD
+		}else if (jpyselector.equals(jpycurrencies[16])) {
+			double nordafricanresult = amount *jpyexchangerates[16];
+			System.out.println("" + amount + "  JPY = " + conversion.format(nordafricanresult) + " TRY");
+//  JPY -> MAD
+		}else if (jpyselector.equals(jpycurrencies[17])) {
+			double morrocoresult = amount * jpyexchangerates[17];
+			System.out.println("" + amount + " JPY = " + conversion.format(morrocoresult) + "MAD");
+
+			//  JPY-> ZAR
+		}else if (jpyselector.equals(jpycurrencies[18])) {
+			double saresult = amount * jpyexchangerates[18];
+			System.out.println("" + amount +"JPY = " + conversion.format(saresult) + "ZAR");
+		}
 
 
 			// chinese yuan conversions
@@ -704,24 +891,30 @@ emojis(countries/territories)*/
 					"HKD",
 					"KRW",
 					"INR",
-					"AUD", "NZD", "HTG", "HRK", "MXN"};
+					"AUD", "NZD", "HTG", "HRK", "MXN","DOP", "RUB", "BRL", "TRY", "MAD","ZAR"};
 
 
 			// chinese currency exchanges
-			double[] chinacurrencyexchanges = {0.1548788,
-					0.11162999,
-					0.19117953,
-					0.12990358,
-					0.14244852,
-					17.126163,
-					1.2022775,
-					175.15111,
-					11.502633,
-					0.20477496,
-					0.2200106,
-					14.382634,
-					0.97353548,
-					3.0688448};
+			double[] chinacurrencyexchanges = {0.15433558,
+					0.11180972 ,
+					0.19227509,
+					0.13055039,
+					0.14270461,
+					17.073099,
+					1.198737,
+					175.52127,
+					11.538724,
+					0.20589525,
+					0.22015003,
+					14.129378,
+					0.97734378,
+					3.0904804,
+					8.8186016,
+					11.499165,
+					0.80211631,
+					1.3412443,
+					1.3809687,
+					2.2190621};
 
 
 			System.out.println("Please select a currency of your choice" +
@@ -784,29 +977,59 @@ emojis(countries/territories)*/
 			} else if (chinayuanselector.equals(chinayuancovert[13])) {
 				double mexicoresults = amount * chinacurrencyexchanges[13];
 				System.out.println("" + amount + " CNY =" + conversion.format(mexicoresults) + " MXN");
-			}
+			}else if (chinayuanselector.equals(chinayuancovert[14])) {
+			double russianresult = amount *chinacurrencyexchanges[14];
+			System.out.println("" + amount + " CNY = " + conversion.format(russianresult) + " DOP");
+//  CNY -> RUB
+		}else if (chinayuanselector.equals(chinayuancovert[15])) {
+			double brazilrealresult = amount *chinacurrencyexchanges[15];
+			System.out.println("" + amount + "  CNY = " + conversion.format(brazilrealresult) + " RUB");
+// CNY -> BRL
+		}else if (chinayuanselector.equals(chinayuancovert[16])) {
+			double turkishresult = amount *chinacurrencyexchanges[16];
+			System.out.println("" + amount + " CNY = " + conversion.format(turkishresult) + " BRL");
+//   CNY -> MAD
+		}else if (chinayuanselector.equals(chinayuancovert[17])) {
+			double nordafricanresult = amount *chinacurrencyexchanges[17];
+			System.out.println("" + amount + "  CNY = " + conversion.format(nordafricanresult) + " TRY");
+//  CNY -> MAD
+		}else if (chinayuanselector.equals(chinayuancovert[18])) {
+			double morrocoresult = amount * chinacurrencyexchanges[18];
+			System.out.println("" + amount + " CNY = " + conversion.format(morrocoresult) + "MAD");
+
+			//  CNY-> ZAR
+		}else if (chinayuanselector.equals(chinayuancovert[19])) {
+			double saresult = amount * chinacurrencyexchanges[19];
+			System.out.println("" + amount +"CNY = " + conversion.format(saresult) + "ZAR");
+		}
 
 		}
 
 		// if player wishes to convert hong kong dollars
 		if (currencyconvert1.equals("Hong Kong Dollar") || currencyconvert1.equals("HKD")) {
 			String[] HKDconversions = {"USD", "CAD", "EUR", "GBP", "CHF",
-					"\n" + "JPY", "CNY", "KRW", "INR", "AUD", "NZD", "HTG", "HRK", "MXN"};
+					"\n" + "JPY", "CNY", "KRW", "INR", "AUD", "NZD", "HTG", "HRK", "MXN","DOP", "RUB", "BRL", "TRY", "MAD","ZAR"};
 // currency exchange rates based on  hkd currencies array
-			double[] hkcurrencyexchange = {0.12883176,
-					0.15902628,
-					0.1080503,
-					0.09284315,
-					0.11849547,
-					14.246892,
-					0.8319018,
-					145.67692,
-					9.5693665,
-					0.1702951,
-					0.18294883,
-					11.960528,
-					0.80983105,
-					2.552073};
+			double[] hkcurrencyexchange = {0.12874298,
+					0.1603922,
+					0.10890208,
+					0.093301381,
+					0.119054,
+					14.243132,
+					0.83419625,
+					146.39855 ,
+					9.6274418,
+					0.17175951,
+					0.18364074,
+					11.779491,
+					0.81516909,
+					2.5774883 ,
+					7.35606,
+					9.5920218,
+					0.6690371,
+					1.1187692,
+					1.1518929,
+					1.8507561};
 			//
 			System.out.println("Select a currency to convert to" +
 					"\n" + Arrays.toString(HKDconversions));
@@ -869,29 +1092,59 @@ emojis(countries/territories)*/
 			} else if (hkconverter.equals(HKDconversions[13])) {
 				double mexiquepesos = amount * hkcurrencyexchange[13];
 				System.out.println("" + amount + " HKD =" + conversion.format(mexiquepesos) + " MXN");
-			}
+			}else if (hkconverter.equals(HKDconversions[14])) {
+			double russianresult = amount *hkcurrencyexchange[14];
+			System.out.println("" + amount + " HKD = " + conversion.format(russianresult) + " DOP");
+//  HKD -> RUB
+		}else if (hkconverter.equals(HKDconversions[15])) {
+			double brazilrealresult = amount *hkcurrencyexchange[15];
+			System.out.println("" + amount + "  HKD = " + conversion.format(brazilrealresult) + " RUB");
+// HKD -> BRL
+		}else if (hkconverter.equals(HKDconversions[16])) {
+			double turkishresult = amount *hkcurrencyexchange[16];
+			System.out.println("" + amount + "  HKD = " + conversion.format(turkishresult) + " BRL");
+//   HKD -> MAD
+		}else if (hkconverter.equals(HKDconversions[17])) {
+			double nordafricanresult = amount *hkcurrencyexchange[17];
+			System.out.println("" + amount + "  HKD = " + conversion.format(nordafricanresult) + " TRY");
+//   HKD -> MAD
+		}else if (hkconverter.equals(HKDconversions[18])) {
+			double morrocoresult = amount * hkcurrencyexchange[18];
+			System.out.println("" + amount + " HKD = " + conversion.format(morrocoresult) + "MAD");
+
+			//  HKD-> ZAR
+		}else if (hkconverter.equals(HKDconversions[19])) {
+			double saresult = amount * hkcurrencyexchange[19];
+			System.out.println("" + amount + "HKD = " + conversion.format(saresult) + " ZAR");
+		}
 			// if player wishes to use south korean won
 		}
 		if (currencyconvert1.equals("KRW") || currencyconvert1.equals("South Korean won")) {
 			String[] potientalwonconversions = {"USD", "CAD", "GBP", "EUR", "CHF",
-					"JPY", "CNY", "HKD", "INR", "AUD", "NZD", "HTG", "HRK", "MXN"};
+					"JPY", "CNY", "HKD", "INR", "AUD", "NZD", "HTG", "HRK", "MXN","DOP", "RUB", "BRL", "TRY", "MAD","ZAR"};
 				/*Based on potientalwonconversions array. Currency exchange rates of that array
 				Order based on the order of currencies. So first is the USD, and goes all the way to NZD
 				 */
-			double[] currencyresults = {0.00088445472,
-					0.0010918261,
-					0.00063740081,
-					0.00074190987,
-					0.00081356736,
-					0.097822713,
-					0.0057116846,
-					0.0068659194,
-					0.06569063,
-					0.0011691843,
-					0.001256011,
-					0.082430948,
-					0.0055591241,
-					0.017517982};
+			double[] currencyresults = {0.00087929428,
+					0.0010954299,
+					0.00063718219,
+					0.00074380407,
+					0.00081300554,
+					0.097275425,
+					0.0056974887,
+					0.0068297441,
+					0.065655461,
+					0.0011732667 ,
+					0.0012538756,
+					0.081412563,
+					0.0055681561,
+					0.017610793,
+					0.050241882,
+					0.06552619,
+					0.0045710091,
+					0.0076417144,
+					0.0078696299,
+					0.012641883};
 
 			System.out.println("Please select a currency you wish to convert to:" +
 					"\n" + Arrays.toString(potientalwonconversions));
@@ -954,29 +1207,59 @@ emojis(countries/territories)*/
 			} else if (woncurrencyresults.equals(potientalwonconversions[13])) {
 				double vivamexicobucks = amount * currencyresults[13];
 				System.out.println("" + amount + " KRW =" + conversion.format(vivamexicobucks) + " MXN");
+			}else if (woncurrencyresults.equals(potientalwonconversions[14])) {
+				double russianresult = amount *currencyresults[14];
+				System.out.println("" + amount + " KRW = " + conversion.format(russianresult) + " DOP");
+//  KRW -> RUB
+			}else if (woncurrencyresults.equals(potientalwonconversions[15])) {
+				double brazilrealresult = amount *currencyresults[15];
+				System.out.println("" + amount + "  KRW = " + conversion.format(brazilrealresult) + " RUB");
+// KRW -> BRL
+			}else if (woncurrencyresults.equals(potientalwonconversions[16])) {
+				double turkishresult = amount *currencyresults[16];
+				System.out.println("" + amount + "  KRW = " + conversion.format(turkishresult) + " BRL");
+//   KRW -> MAD
+			}else if (woncurrencyresults.equals(potientalwonconversions[17])) {
+				double nordafricanresult = amount *currencyresults[17];
+				System.out.println("" + amount + "  KRW = " + conversion.format(nordafricanresult) + " TRY");
+//   KRW -> MAD
+			}else if (woncurrencyresults.equals(potientalwonconversions[18])) {
+				double morrocoresult = amount * currencyresults[18];
+				System.out.println("" + amount + " KRW = " + conversion.format(morrocoresult) + "MAD");
+
+				//  INR-> ZAR
+			}else if (woncurrencyresults.equals(potientalwonconversions[19])) {
+				double saresult = amount * currencyresults[19];
+				System.out.println("" + amount + "KRW = " + conversion.format(saresult) + " ZAR");
 			}
 			// INDIAN RUPEE CURRENCIES
 		}
 		if (currencyconvert1.equals("INR") || currencyconvert1.equals("Indian rupee")) {
 			String[] indianconversions = {"USD", "CAD", "GBP", "EUR", "CHF" +
-					"\n", "JPY", "CNY", "HKD", "KRW", "AUD", "NZD", "HTG", "HRK", "MXN"};
+					"\n", "JPY", "CNY", "HKD", "KRW", "AUD", "NZD", "HTG", "HRK", "MXN","DOP", "RUB", "BRL", "TRY", "MAD","ZAR"};
 				/*Based on indianconversions array. Currency exchange rates of that array
 				Order based on the order of currencies. So first is the USD, and goes all the way to NZD
 				 */
-			double[] indianexchangerates = {0.013464294,
-					0.016618974,
-					0.0097019789,
-					0.01129091,
-					0.01238228,
-					1.488783,
-					0.086928313,
-					0.10451013,
-					15.216049,
-					0.017794842,
-					0.019117068,
-					1.2509995,
-					0.084616193,
-					0.26668204};
+			double[] indianexchangerates = {0.013379685,
+					0.016669297,
+					0.0096942881,
+					0.011315252,
+					0.012369263,
+					1.4800144,
+					0.086674277,
+					0.10390627,
+					15.210067,
+					0.017850618,
+					0.019079465,
+					1.2238974,
+					1.2238974,
+					0.26788249,
+					0.76410879,
+					0.99679317,
+					0.069528319 ,
+					0.11622709,
+					0.11967369,
+					0.19248612};
 
 			System.out.println("Please select a currency you wish to convert to:" +
 					"\n" + Arrays.toString(indianconversions));
@@ -1037,32 +1320,63 @@ emojis(countries/territories)*/
 				// INR -> MXN
 			} else if (indianresults.equals(indianconversions[13])) {
 				double vivapesos = amount * indianexchangerates[13];
-				System.out.println("" + amount + " INR =" + conversion.format(vivapesos) + " INR");
-			}
+				System.out.println("" + amount + " INR =" + conversion.format(vivapesos) + " MXN");
+
+		}else if (indianresults.equals(indianconversions[14])) {
+			double russianresult = amount *indianexchangerates[14];
+			System.out.println("" + amount + " INR = " + conversion.format(russianresult) + " DOP");
+//  INR -> RUB
+		}else if (indianresults.equals(indianconversions[15])) {
+			double brazilrealresult = amount *indianexchangerates[15];
+			System.out.println("" + amount + "  INR = " + conversion.format(brazilrealresult) + " RUB");
+// INR -> BRL
+		}else if (indianresults.equals(indianconversions[16])) {
+			double turkishresult = amount *indianexchangerates[16];
+			System.out.println("" + amount + "  INR = " + conversion.format(turkishresult) + " BRL");
+//   INR -> MAD
+		}else if (indianresults.equals(indianconversions[17])) {
+			double nordafricanresult = amount *indianexchangerates[17];
+			System.out.println("" + amount + "  INR = " + conversion.format(nordafricanresult) + " TRY");
+//   INR -> MAD
+		}else if (indianresults.equals(indianconversions[18])) {
+			double morrocoresult = amount * indianexchangerates[18];
+			System.out.println("" + amount + "  INR = " + conversion.format(morrocoresult) + "MAD");
+
+			//  INR-> ZAR
+		}else if (indianresults.equals(indianconversions[19])) {
+			double saresult = amount * indianexchangerates[19];
+			System.out.println("" + amount + "   INR = " + conversion.format(saresult) + " ZAR");
+		}
 // if player decides to choose  Australian dollar
 
 		}
 		if(currencyconvert1.equals("AUD") || currencyconvert1.equals("Australian Dollar")) {
 			//  Player choices when choosing australian dollars
 			String[] aussieconversions = {"USD", "CAD", "GBP", "EUR", "CHF" +
-					"\n", "JPY", "CNY", "HKD", "INR", "KRW", "NZD", "HTG", "HRK", "MXN"};
+					"\n", "JPY", "CNY", "HKD", "INR", "KRW", "NZD", "HTG", "HRK", "MXN","DOP", "RUB", "BRL", "TRY", "MAD","ZAR"};
 				/*Based on indianconversions array. Currency exchange rates of that array
 				Order based on the order of currencies. So first is the USD, and goes all the way to NZD
 				 */
-			double[] aussieexchangerates = {0.26668204,
-					0.93392476,
-					0.54523281,
-					0.63455687,
-					0.69586911,
-					83.682119,
-					4.8855211,
-					5.8735144,
-					56.195684,
-					855.2197,
-					1.0743797,
-					70.255129,
-					4.7561792,
-					14.990436};
+			double[] aussieexchangerates = {0.74944082,
+					0.93374686,
+					0.54300615,
+					0.63387727,
+					0.69293784,
+					82.909246,
+					4.8550223,
+					5.8197339,
+					55.999723,
+					852.08099,
+					1.0689571,
+					68.576063,
+					68.576063,
+					15.000943,
+					42.8147,
+					55.819113,
+					3.8937341,
+					6.5104217,
+					6.7047435,
+					10.763572};
 
 			System.out.println("Please select a currency you wish to convert to:" +
 					"\n" + Arrays.toString(aussieconversions));
@@ -1124,7 +1438,32 @@ emojis(countries/territories)*/
 			} else if (aussieresults.equals(aussieconversions[13])) {
 				double centralamericabucks = amount * aussieexchangerates[13];
 				System.out.println("" + amount + " AUD =" + conversion.format(centralamericabucks) + " MXN");
-			}
+
+			}else if (aussieresults.equals(aussieconversions[14])) {
+			double russianresult = amount *aussieexchangerates[14];
+			System.out.println("" + amount + " AUD = " + conversion.format(russianresult) + " DOP");
+//  NZD -> RUB
+		}else if (aussieresults.equals(aussieconversions[15])) {
+			double brazilrealresult = amount *aussieexchangerates[15];
+			System.out.println("" + amount + "  AUD = " + conversion.format(brazilrealresult) + " RUB");
+//  NZD -> BRL
+		}else if (aussieresults.equals(aussieconversions[16])) {
+			double turkishresult = amount *aussieexchangerates[16];
+			System.out.println("" + amount + "  AUD = " + conversion.format(turkishresult) + " BRL");
+//   NZD -> MAD
+		}else if (aussieresults.equals(aussieconversions[17])) {
+			double nordafricanresult = amount *aussieexchangerates[17];
+			System.out.println("" + amount + "  AUD = " + conversion.format(nordafricanresult) + " TRY");
+//   NZD -> MAD
+		}else if (aussieresults.equals(aussieconversions[18])) {
+			double morrocoresult = amount * aussieexchangerates[18];
+			System.out.println("" + amount + "  AUD = " + conversion.format(morrocoresult) + "MAD");
+
+			//  NZD -> ZAR
+		}else if (aussieresults.equals(aussieconversions[19])) {
+			double saresult = amount * aussieexchangerates[19];
+			System.out.println("" + amount + "   AUD = " + conversion.format(saresult) + " ZAR");
+		}
 // if player wants to convert from  new zealand dollars
 
 		}
@@ -1132,24 +1471,31 @@ emojis(countries/territories)*/
 
 			//  Player choices when choosing australian dollars
 			String[] nzdconversions = {"USD", "CAD", "GBP", "EUR", "CHF" +
-					"\n", "JPY", "CNY", "HKD", "INR", "KRW", "AUD", "HTG", "HRK", "MXN"};
+					"\n", "JPY", "CNY", "HKD", "INR", "KRW", "AUD", "HTG", "HRK", "MXN","DOP", "RUB", "BRL", "TRY", "MAD","ZAR"};
 				/*Based on newleazandconversions array. Currency exchange rates of that array
 				Order based on the order of currencies. So first is the USD, and goes all the way to NZD
 				 */
-			double[] nzdexchangerates = {0.7043073,
-					0.86925779,
-					0.50749509,
-					0.50749509,
-					0.64765114,
-					77.881003,
-					4.5471157,
-					5.4663209,
-					52.294284,
-					796.2045,
-					0.93071463,
-					65.374863,
-					4.4272178,
-					4.4272178};
+			double[] nzdexchangerates = {0.70092129,
+					0.87342216,
+					0.50788918,
+					0.59296442,
+					0.64820434,
+					77.559694,
+					4.5412467,
+					5.444257,
+					52.375776,
+					796.9754,
+					0.9354474,
+					0.9354474,
+					4.4386106 ,
+					14.03465,
+					40.054569,
+					52.223061,
+					3.6430809,
+					6.0909128,
+					6.2737164,
+					6.2737164};
+
 // Selecting currency to choose too based on nzd currency conversion array
 			System.out.println("Please select a currency you wish to convert to:" +
 					"\n" + Arrays.toString(nzdconversions));
@@ -1211,27 +1557,58 @@ emojis(countries/territories)*/
 			} else if (nzdresults.equals(nzdconversions[13])) {
 				double mxnbucks = amount * nzdexchangerates[13];
 				System.out.println("" + amount + " NZD =" + conversion.format(mxnbucks) + " MXN");
-			}
+			// NZD -> DOP
+	}else if (nzdresults.equals(nzdconversions[14])) {
+		double russianresult = amount *nzdexchangerates[14];
+		System.out.println("" + amount + " NZD = " + conversion.format(russianresult) + " DOP");
+//  NZD -> RUB
+	}else if (nzdresults.equals(nzdconversions[15])) {
+		double brazilrealresult = amount *nzdexchangerates[15];
+		System.out.println("" + amount + "  NZD = " + conversion.format(brazilrealresult) + " RUB");
+//  NZD -> BRL
+	}else if (nzdresults.equals(nzdconversions[16])) {
+		double turkishresult = amount *nzdexchangerates[16];
+		System.out.println("" + amount + "  NZD = " + conversion.format(turkishresult) + " BRL");
+//   NZD -> MAD
+	}else if (nzdresults.equals(nzdconversions[17])) {
+		double nordafricanresult = amount *nzdexchangerates[17];
+		System.out.println("" + amount + "  NZD = " + conversion.format(nordafricanresult) + " TRY");
+//   NZD -> MAD
+	}else if (nzdresults.equals(nzdconversions[18])) {
+		double morrocoresult = amount * nzdexchangerates[18];
+		System.out.println("" + amount + "  NZD = " + conversion.format(morrocoresult) + "MAD");
+
+		//  NZD -> ZAR
+	}else if (nzdresults.equals(nzdconversions[19])) {
+		double saresult = amount * nzdexchangerates[19];
+		System.out.println("" + amount + "   NZD = " + conversion.format(saresult) + " ZAR");
+	}
 			// if player decides to convert haitian currencies
 		}
 	else if (currencyconvert1.equals("HTG") || currencyconvert1.equals("Haitian Gourde")) {
 			String[] htgconversions = {"USD", "CAD", "GBP", "EUR", "CHF" +
-					"\n", "JPY", "CNY", "HKD", "INR", "KRW", "AUD", "NZD", "MXN", "HRK"};
+					"\n", "JPY", "CNY", "HKD", "INR", "KRW", "AUD", "NZD", "MXN", "HRK","DOP", "RUB", "BRL", "TRY", "MAD","ZAR"};
 // haitian currency exchange rates
-			double[] htgexchanges = {0.010743448,
-					0.013261766,
-					0.007741704,
-					0.009010012,
-					0.0098638676,
-					1.186305,
-					0.069248318,
-					0.083256269,
-					0.79668294,
-					12.151811,
-					0.014206867,
-					0.015263384,
-					0.21308671,
-					0.067610529};
+			double[] htgexchanges = {0.010929254,
+					0.010929254,
+					0.0078431143,
+					0.0091564108,
+					0.010009938,
+					1.2074283,
+					0.070735736 ,
+					0.0848001,
+					0.81634858,
+					12.415145,
+					0.014584576,
+					0.015596873,
+					0.21888802,
+					0.069216857,
+					0.62451209,
+					0.62451209,
+					0.62451209,
+					0.094957693,
+					0.094957693,
+					0.15697323};
 			System.out.println("Please select a currency you wish to convert to:" +
 					"\n" + Arrays.toString(htgconversions));
 			scan.nextLine();
@@ -1294,27 +1671,58 @@ emojis(countries/territories)*/
 			} else if (haitianresults.equals(htgconversions[13])) {
 				double croatresult = amount * htgexchanges[13];
 				System.out.println("" + amount + " HTG =" + conversion.format(croatresult) + " HRK");
-			}
+			// HTG -> DOP
+	}else if (haitianresults.equals(htgconversions[14])) {
+		double russianresult = amount *htgexchanges[14];
+		System.out.println("" + amount + "HTG = " + conversion.format(russianresult) + " DOP");
+//  HTG -> RUB
+	}else if (haitianresults.equals(htgconversions[15])) {
+		double brazilrealresult = amount *htgexchanges[15];
+		System.out.println("" + amount + "  HTG = " + conversion.format(brazilrealresult) + " RUB");
+//  HTG -> BRL
+	}else if (haitianresults.equals(htgconversions[16])) {
+		double turkishresult = amount *htgexchanges[16];
+		System.out.println("" + amount + "  HTG = " + conversion.format(turkishresult) + " BRL");
+//  HTG -> MAD
+	}else if (haitianresults.equals(htgconversions[17])) {
+		double nordafricanresult = amount *htgexchanges[17];
+		System.out.println("" + amount + " HTG = " + conversion.format(nordafricanresult) + " TRY");
+//  HTG -> MAD
+	}else if (haitianresults.equals(htgconversions[18])) {
+		double morrocoresult = amount * htgexchanges[18];
+		System.out.println("" + amount + "  HTG = " + conversion.format(morrocoresult) + "MAD");
+
+		// HTG -> ZAR
+	}else if (haitianresults.equals(htgconversions[19])) {
+		double saresult = amount * htgexchanges[19];
+		System.out.println("" + amount + "  HTG = " + conversion.format(saresult) + " ZAR");
+	}
 			// If player chooses Croatian Kunas
 		}
 	 if (currencyconvert1.equals("Croatian Kuna") || currencyconvert1.equals("HRK")) {
 			String[] kunaconversions = {"USD", "CAD", "GBP", "EUR", "CHF" +
-					"\n", "JPY", "CNY", "HKD", "INR", "KRW", "AUD", "NZD", "HTG", "MXN"};
+					"\n", "JPY", "CNY", "HKD", "INR", "KRW", "AUD", "NZD", "HTG", "MXN","DOP", "RUB", "BRL", "TRY", "MAD","ZAR"};
 // croatian currency exchange rates
-			double[] kunaexchange = {0.15910053,
-					0.19637593,
-					0.11464166,
-					0.13341894,
-					0.14629917,
-					17.597213,
-					1.0273129,
-					1.2350565,
-					11.817843,
-					179.92353,
-					0.21032429,
-					0.22594849,
-					14.775891,
-					3.1544329};
+			double[] kunaexchange = {0.15790002 ,
+					0.19679477,
+					0.11442473,
+					0.13359325,
+					0.14602024,
+					17.469801,
+					1.0230488,
+					1.2264653,
+					11.806394,
+					179.54474,
+					0.210736,
+					0.22528708,
+					14.528824 ,
+					3.1621197,
+					9.0203104,
+					11.751665,
+					11.751665,
+					1.3719338,
+					1.4125923,
+					2.2678487};
 
 			System.out.println("Please select a currency you wish to convert to:" +
 					"\n" + Arrays.toString(kunaconversions));
@@ -1376,27 +1784,63 @@ emojis(countries/territories)*/
 			} else if (croatianresults.equals(kunaconversions[13])) {
 				double mexicanresult = amount * kunaexchange[13];
 				System.out.println("" + amount + " HRK = " + conversion.format(mexicanresult) + " MXN");
-			}
-			// if player chooses mexican pesos
+// HRK -> DOP
+			}else if (croatianresults.equals(kunaconversions[14])) {
+		 double russianresult = amount *kunaexchange[14];
+		 System.out.println("" + amount + " HRK = " + conversion.format(russianresult) + " DOP");
+//  HRK -> RUB
+	 }else if (croatianresults.equals(kunaconversions[15])) {
+		 double brazilrealresult = amount *kunaexchange[15];
+		 System.out.println("" + amount + "  HRK = " + conversion.format(brazilrealresult) + " RUB");
+//  HRK -> BRL
+	 }else if (croatianresults.equals(kunaconversions[16])) {
+		 double turkishresult = amount * kunaexchange[16];
+		 System.out.println("" + amount + "  HRK = " + conversion.format(turkishresult) + " BRL");
+//  HRK -> MAD
+	 }else if (croatianresults.equals(kunaconversions[17])) {
+		 double nordafricanresult = amount *kunaexchange[17];
+		 System.out.println("" + amount + " HRK = " + conversion.format(nordafricanresult) + " TRY");
+//  HRK -> MAD
+	 }else if (croatianresults.equals(kunaconversions[18])) {
+		 double morrocoresult = amount * kunaexchange[18];
+		 System.out.println("" + amount + "  HRK = " + conversion.format(morrocoresult) + "MAD");
+
+		 // HRK -> ZAR
+	 }else if (croatianresults.equals(kunaconversions[19])) {
+		 double saresult = amount * kunaexchange[19];
+		 System.out.println("" + amount + "  HRK = " + conversion.format(saresult) + " ZAR");
+	 }
+
+
+
+		// if player chooses mexican pesos
 		}
 		if (currencyconvert1.equals("Mexican Peso") || currencyconvert1.equals("MXN")) {
-			String[] mexicanpesoconversions = {"USD", "CAD", "GBP", "EUR", "CHF" +
-					"\n", "JPY", "CNY", "HKD", "INR", "KRW", "AUD", "NZD", "HTG", "HRK"};
+			String[] mexicanpesoconversions = {"USD", "CAD", "GBP", "EUR", "CHF",
+					 "JPY", "CNY", "HKD", "INR", "KRW", "AUD", "NZD",
+					"HTG", "HRK","DOP", "RUB", "BRL", "TRY", "MAD","ZAR"};
 // mexican currency exchange rates for the conversion array above
-			double[] mexicanexchange = {0.050445886,
-					0.062273946,
-					0.062273946,
-					0.042301893,
-					0.046388797,
-					5.5795476,
-					0.32555336,
-					0.39137258,
-					0.39137258,
-					0.39137258,
-					0.066648992,
-					0.071607296,
+			double[] mexicanexchange = {0.049936966,
+					0.062230276,
+					0.036186161,
+					0.042248687,
+					0.046177319,
+					5.5254265,
+					0.32354086,
+					0.38788222,
+					3.7343155,
+					56.785794,
+					0.066632014,
+					0.071239183,
+					4.5738399,
 					4.6851848,
-					4.6851848};
+					0.31628776,
+					2.8537849,
+					3.717688,
+					0.25956375,
+					0.43395212,
+					0.44692424,
+					0.7173068};
 
 			System.out.println("Please select a currency you wish to convert to:" +
 					"\n" + Arrays.toString(mexicanpesoconversions));
@@ -1460,12 +1904,40 @@ emojis(countries/territories)*/
 			} else if (mexicanresults.equals(mexicanpesoconversions[13])) {
 				double mexicanresult = amount * mexicanexchange[13];
 				System.out.println("" + amount + " MXN = " + conversion.format(mexicanresult) + " HRK");
+
+			}else if (mexicanresults.equals(mexicanpesoconversions[14])) {
+				double russianresult = amount *mexicanexchange[14];
+				System.out.println("" + amount + " MXN = " + conversion.format(russianresult) + " DOP");
+//  MXN -> RUB
+			}else if (mexicanresults.equals(mexicanpesoconversions[15])) {
+				double brazilrealresult = amount *mexicanexchange[15];
+				System.out.println("" + amount + "  MXN = " + conversion.format(brazilrealresult) + " RUB");
+//  MXN -> BRL
+			}else if (mexicanresults.equals(mexicanpesoconversions[16])) {
+				double turkishresult = amount * mexicanexchange[16];
+				System.out.println("" + amount + "   MXN = " + conversion.format(turkishresult) + " BRL");
+//  MXN -> MAD
+			}else if (mexicanresults.equals(mexicanpesoconversions[17])) {
+				double nordafricanresult = amount * mexicanexchange[17];
+				System.out.println("" + amount + "  MXN = " + conversion.format(nordafricanresult) + " TRY");
+//  MXN -> MAD
+			}else if (mexicanresults.equals(mexicanpesoconversions[18])) {
+				double morrocoresult = amount * mexicanexchange[18];
+				System.out.println("" + amount + "   MXN = " + conversion.format(morrocoresult) + "MAD");
+
+				// MXN -> ZAR
+			}else if (mexicanresults.equals(mexicanpesoconversions[19])) {
+				double saresult = amount * mexicanexchange[19];
+				System.out.println("" + amount + "  MXN = " + conversion.format(saresult) + " ZAR");
 			}
+
+
+
 
 			// If player wishes to choose dominican pesos
 		}if (currencyconvert1.equals("Dominican Pesos") || currencyconvert1.equals("DOP")) {
-			String[] dominicainpesos = {"USD", "CAD", "GBP", "EUR", "CHF" +
-					"\n", "JPY", "CNY", "HKD", "INR", "KRW", "AUD", "NZD", "HTG", "HRK","MXN",
+			String[] dominicainpesos = {"USD", "CAD", "GBP", "EUR", "CHF"
+					, "JPY", "CNY", "HKD", "INR", "KRW", "AUD", "NZD", "HTG", "HRK","MXN",
 					"RUB","BRL","TRY","MAD","ZAR"};
 
 			// Dominican pesos exchange rates
